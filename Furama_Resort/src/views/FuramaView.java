@@ -2,7 +2,7 @@ package views;
 
 import java.util.Scanner;
 
-public class FuramaResortView {
+public class FuramaView {
     private final Scanner scanner = new Scanner(System.in);
 
     public void displayMainMenu() {
