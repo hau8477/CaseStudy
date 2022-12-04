@@ -3,14 +3,14 @@ package views;
 import java.util.Scanner;
 
 public class FuramaView {
-    private final Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
-    public void displayMainMenu() {
+    public static void displayMainMenu() {
         int choice;
 
         do {
             System.out.print("---------------Furama Resort---------------\n" +
-                    "---------------------Welcome to Furama Resort---------------------" +
+                    "---------------------Welcome to Furama Resort---------------------\n" +
                     "1.Employee Management\n" +
                     "2.Customer Management\n" +
                     "3.Facility Management \n" +
@@ -22,14 +22,19 @@ public class FuramaView {
 
             switch (choice) {
                 case 1:
+                    EmployeeView.displayEmployeeMenu();
                     break;
                 case 2:
+                    CustomerView.displayCustomerMenu();
                     break;
                 case 3:
+                    FacilityView.displayFacilityMenu();
                     break;
                 case 4:
+                    BookingView.displayBookingMenu();
                     break;
                 case 5:
+                    PromotionView.displayPromotionMenu();
                     break;
                 case 6:
                     System.exit(1);
