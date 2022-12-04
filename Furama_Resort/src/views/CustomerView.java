@@ -21,6 +21,10 @@ public class CustomerView {
                 case 2:
                 case 3:
                 case 4:
+                    System.out.println("Goodbye customers and see you again!");
+                    break;
+                default:
+                    System.err.println("You entered the wrong choice, please re-enter!");
             }
         } while (choice != 4);
 
