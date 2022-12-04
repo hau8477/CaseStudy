@@ -1,5 +1,7 @@
 package views;
 
+import views.furama_menu.*;
+
 import java.util.Scanner;
 
 public class FuramaView {

@@ -1,4 +1,6 @@
-package views;
+package views.furama_menu;
+
+import views.FuramaView;
 
 import java.util.Scanner;
 

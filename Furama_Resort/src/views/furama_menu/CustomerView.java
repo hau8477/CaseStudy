@@ -1,17 +1,20 @@
-package views;
+package views.furama_menu;
+
+import views.FuramaView;
 
 import java.util.Scanner;
 
-public class PromotionView {
-    private static Scanner scanner = new Scanner(System.in);
-    public static void displayPromotionMenu(){
+public class CustomerView {
+    private static final Scanner scanner = new Scanner(System.in);
+    public static void displayCustomerMenu(){
         int choice;
 
         do {
-            System.out.print("---------------Promotion Management---------------\n" +
-                    "1. Display list customers use service.\n" +
-                    "2. Display list customers get voucher.\n" +
-                    "3. Return main menu.\n" +
+            System.out.print("---------------Customer Management---------------\n" +
+                    "1. Display list customers.\n" +
+                    "2. Add new customer.\n" +
+                    "3. Edit customer.\n" +
+                    "4. Return main menu.\n" +
                     "Please enter your choice: ");
             choice = Integer.parseInt(scanner.nextLine());
 
@@ -19,12 +22,13 @@ public class PromotionView {
                 case 1:
                 case 2:
                 case 3:
+                case 4:
                     System.out.println("Goodbye customers and see you again!");
                     break;
                 default:
                     System.err.println("You entered the wrong choice, please re-enter!");
             }
-        } while (choice != 3);
+        } while (choice != 4);
 
         FuramaView.displayMainMenu();
     }
