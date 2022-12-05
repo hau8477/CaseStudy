@@ -1,12 +1,18 @@
 package views.furama_menu;
 
+import controllers.EmployeeController;
+import models.persons.inheritance.Employee;
 import views.FuramaView;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class EmployeeView {
     private static final Scanner scanner = new Scanner(System.in);
-    public static void displayEmployeeMenu(){
+
+    private static EmployeeController employeeController = new EmployeeController();
+
+    public static void displayEmployeeMenu() {
         int choice;
 
         do {
@@ -21,16 +27,75 @@ public class EmployeeView {
 
             switch (choice) {
                 case 1:
+                    List<Employee> employees = employeeController.displayList();
+                    for (Employee employee : employees) {
+                        System.out.println(employee);
+                    }
+                    break;
                 case 2:
+                    System.out.print("Enter full name employee: ");
+                    String fullName = scanner.nextLine();
+                    System.out.print("Enter day of birth: ");
+                    String dayOfBirth = scanner.nextLine();
+                    System.out.print("Enter gender: ");
+                    String gender = scanner.nextLine();
+                    System.out.print("Enter citizen ID: ");
+                    String citizenID = scanner.nextLine();
+                    System.out.print("Enter phone number: ");
+                    String phoneNumber = scanner.nextLine();
+                    System.out.print("Enter email: ");
+                    String email = scanner.nextLine();
+                    System.out.print("Enter employee ID: ");
+                    String employeeID = scanner.nextLine();
+                    System.out.print("Enter level: ");
+                    String level = scanner.nextLine();
+                    System.out.print("Enter position: ");
+                    String position = scanner.nextLine();
+                    System.out.print("Enter salary: ");
+                    double salary = Double.parseDouble(scanner.nextLine());
+
+                    Employee employee = new Employee(fullName, dayOfBirth, gender, citizenID,
+                            phoneNumber, email, employeeID, level, position, salary);
+                    employeeController.addEmployee(employee);
+                    break;
                 case 3:
+                    System.out.print("Enter employee ID want to delete: ");
+                    String employeeIDDelete = scanner.nextLine();
+                    employeeController.deleteEmployee(employeeIDDelete);
+                    break;
                 case 4:
+                    System.out.print("Enter employee ID want to update: ");
+                    String employeeIDUpdate = scanner.nextLine();
+                    System.out.print("Enter full name employee: ");
+                    String fullNameUpdate = scanner.nextLine();
+                    System.out.print("Enter day of birth: ");
+                    String dayOfBirthUpdate = scanner.nextLine();
+                    System.out.print("Enter gender: ");
+                    String genderUpdate = scanner.nextLine();
+                    System.out.print("Enter citizen ID: ");
+                    String citizenIDUpdate = scanner.nextLine();
+                    System.out.print("Enter phone number: ");
+                    String phoneNumberUpdate = scanner.nextLine();
+                    System.out.print("Enter email: ");
+                    String emailUpdate = scanner.nextLine();
+                    System.out.print("Enter level: ");
+                    String levelUpdate = scanner.nextLine();
+                    System.out.print("Enter position: ");
+                    String positionUpdate = scanner.nextLine();
+                    System.out.print("Enter salary: ");
+                    double salaryUpdate = Double.parseDouble(scanner.nextLine());
+
+                    Employee employeeUpdate = new Employee(fullNameUpdate, dayOfBirthUpdate, genderUpdate, citizenIDUpdate,
+                            phoneNumberUpdate, emailUpdate, employeeIDUpdate, levelUpdate, positionUpdate, salaryUpdate);
+                    employeeController.editEmployee(employeeUpdate);
+                    break;
                 case 5:
                     System.out.println("Goodbye customers and see you again!");
+                    employeeController.returnMainMenu();
                     break;
                 default:
                     System.err.println("You entered the wrong choice, please re-enter!");
             }
         } while (choice != 5);
-        FuramaView.displayMainMenu();
     }
 }

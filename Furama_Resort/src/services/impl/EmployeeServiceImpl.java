@@ -16,6 +16,8 @@ public class EmployeeServiceImpl implements IEmployeeService {
             if (employee1.getEmployeeID().equals(employee.getEmployeeID())) {
                 employee1.setFullName(employee.getFullName());
                 employee1.setDayOfBirth(employee.getDayOfBirth());
+                employee1.setGender(employee.getGender());
+                employee1.setCitizenID(employee.getCitizenID());
                 employee1.setPhoneNumber(employee.getPhoneNumber());
                 employee1.setEmail(employee.getEmail());
                 employee1.setLevel(employee.getLevel());
