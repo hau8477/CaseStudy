@@ -12,7 +12,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
     @Override
     public void editEmployee(Employee employee) {
         for (Employee employee1 : employees) {
-            if (employee1.getEmployeeID() == employee.getEmployeeID()) {
+            if (employee1.getEmployeeID().equals(employee.getEmployeeID())) {
                 employee1.setFullName(employee.getFullName());
                 employee1.setDayOfBirth(employee.getDayOfBirth());
                 employee1.setPhoneNumber(employee.getPhoneNumber());
@@ -30,7 +30,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
         Employee employeeDelete = null;
 
         for (Employee employee : employees) {
-            if (employee.getEmployeeID() == employeeID) {
+            if (employee.getEmployeeID().equals(employeeID)) {
                 employeeDelete = employee;
                 break;
             }
@@ -45,7 +45,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
     @Override
     public void addNew(Employee object) {
         for (Employee employee : employees) {
-            if (employee.getEmployeeID() == object.getEmployeeID()) {
+            if (employee.getEmployeeID().equals(object.getEmployeeID())) {
                 return;
             }
         }

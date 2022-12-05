@@ -5,7 +5,7 @@ import services.IBookingService;
 
 import java.util.List;
 
-public class BookingServiceImpl implements IBookingService {
+public class BookingService implements IBookingService {
     @Override
     public void addNew(Booking object) {
 
