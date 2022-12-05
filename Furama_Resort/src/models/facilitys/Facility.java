@@ -2,15 +2,15 @@ package models.facilitys;
 
 public abstract class Facility {
     private String nameService;
-    private double useArea;
-    private double rentCost;
-    private int maxPerson;
+    private String useArea;
+    private String rentCost;
+    private String maxPerson;
     private String rentalType;
 
     public Facility() {
     }
 
-    public Facility(String nameService, double useArea, double rentCost, int maxPerson, String rentalType) {
+    public Facility(String nameService, String useArea, String rentCost, String maxPerson, String rentalType) {
         this.nameService = nameService;
         this.useArea = useArea;
         this.rentCost = rentCost;
@@ -26,27 +26,27 @@ public abstract class Facility {
         this.nameService = nameService;
     }
 
-    public double getUseArea() {
+    public String getUseArea() {
         return useArea;
     }
 
-    public void setUseArea(double useArea) {
+    public void setUseArea(String useArea) {
         this.useArea = useArea;
     }
 
-    public double getRentCost() {
+    public String getRentCost() {
         return rentCost;
     }
 
-    public void setRentCost(double rentCost) {
+    public void setRentCost(String rentCost) {
         this.rentCost = rentCost;
     }
 
-    public int getMaxPerson() {
+    public String getMaxPerson() {
         return maxPerson;
     }
 
-    public void setMaxPerson(int maxPerson) {
+    public void setMaxPerson(String maxPerson) {
         this.maxPerson = maxPerson;
     }
 

@@ -112,7 +112,7 @@ public class EmployeeView {
                     break;
                 case 5:
                     System.out.println("Goodbye customers and see you again!");
-                    
+
                     employeeController.returnMainMenu();
                     break;
                 default:

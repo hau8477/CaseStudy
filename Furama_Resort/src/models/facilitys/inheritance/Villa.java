@@ -4,14 +4,14 @@ import models.facilitys.Facility;
 
 public class Villa extends Facility {
     private String roomStandard;
-    private double poolArea;
-    private int floorNumbers;
+    private String poolArea;
+    private String floorNumbers;
 
     public Villa() {
     }
 
-    public Villa(String nameService, double useArea, double rentCost, int maxPerson, String rentalType,
-                 String roomStandard, double poolArea, int floorNumbers) {
+    public Villa(String nameService, String useArea, String rentCost, String maxPerson, String rentalType,
+                 String roomStandard, String poolArea, String floorNumbers) {
         super(nameService, useArea, rentCost, maxPerson, rentalType);
         this.roomStandard = roomStandard;
         this.poolArea = poolArea;
@@ -26,19 +26,19 @@ public class Villa extends Facility {
         this.roomStandard = roomStandard;
     }
 
-    public double getPoolArea() {
+    public String getPoolArea() {
         return poolArea;
     }
 
-    public void setPoolArea(double poolArea) {
+    public void setPoolArea(String poolArea) {
         this.poolArea = poolArea;
     }
 
-    public int getFloorNumbers() {
+    public String getFloorNumbers() {
         return floorNumbers;
     }
 
-    public void setFloorNumbers(int floorNumbers) {
+    public void setFloorNumbers(String floorNumbers) {
         this.floorNumbers = floorNumbers;
     }
 
