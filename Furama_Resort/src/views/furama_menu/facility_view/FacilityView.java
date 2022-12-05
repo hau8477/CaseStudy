@@ -11,7 +11,8 @@ public class FacilityView {
     private static final Scanner scanner = new Scanner(System.in);
 
     private static final FacilityController facilityController = new FacilityController();
-    public static void displayFacilityMenu(){
+
+    public static void displayFacilityMenu() {
         int choice;
 
         do {
@@ -25,8 +26,8 @@ public class FacilityView {
 
             switch (choice) {
                 case 1:
-                    Map<Facility,Integer> facilityIntegerMap = facilityController.getListFacility();
-                    for (Map.Entry<Facility,Integer> entry: facilityIntegerMap.entrySet()) {
+                    Map<Facility, Integer> facilityIntegerMap = facilityController.getListFacility();
+                    for (Map.Entry<Facility, Integer> entry : facilityIntegerMap.entrySet()) {
                         System.out.println(entry);
                     }
                     break;
@@ -34,14 +35,15 @@ public class FacilityView {
                     FacilityMenu.displayMenu();
                     break;
                 case 3:
+                    break;
                 case 4:
                     System.out.println("Goodbye customers and see you again!");
+
+                    facilityController.returnMainMenu();
                     break;
                 default:
                     System.err.println("You entered the wrong choice, please re-enter!");
             }
         } while (choice != 4);
-
-        FuramaView.displayMainMenu();
     }
 }
