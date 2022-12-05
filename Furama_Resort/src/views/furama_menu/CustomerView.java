@@ -79,6 +79,7 @@ public class CustomerView {
                             citizenIDUpdate,phoneNumberUpdate,emailUpdate,customerIDUpdate,customerTypeUpdate,addressUpdate);
 
                     customerController.editCustomer(customerUpdate);
+                    break;
                 case 4:
                     System.out.println("Goodbye customers and see you again!");
                     customerController.returnMainMenu();
