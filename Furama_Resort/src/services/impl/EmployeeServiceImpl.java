@@ -2,6 +2,7 @@ package services.impl;
 
 import models.persons.inheritance.Employee;
 import services.IEmployeeService;
+import views.FuramaView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,6 +60,6 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
     @Override
     public void returnMainMenu() {
-
+        FuramaView.displayMainMenu();
     }
 }
