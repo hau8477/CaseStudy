@@ -1,5 +1,7 @@
 package models.facilitys;
 
+import java.util.Objects;
+
 public abstract class Facility {
     private String nameService;
     private String useArea;
@@ -59,6 +61,21 @@ public abstract class Facility {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Facility facility = (Facility) o;
+        return Objects.equals(nameService, facility.nameService) && Objects.equals(useArea, facility.useArea)
+                && Objects.equals(rentCost, facility.rentCost) && Objects.equals(maxPerson, facility.maxPerson)
+                && Objects.equals(rentalType, facility.rentalType);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nameService, useArea, rentCost, maxPerson, rentalType);
+    }
+
+    @Override
     public String toString() {
         return "nameService='" + nameService + '\'' +
                 ", useArea=" + useArea +
@@ -66,6 +83,5 @@ public abstract class Facility {
                 ", maxPerson=" + maxPerson +
                 ", rentalType='" + rentalType + '\'';
     }
-
 
 }
