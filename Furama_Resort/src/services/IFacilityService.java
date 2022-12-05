@@ -2,8 +2,14 @@ package services;
 
 import models.facilitys.Facility;
 
-import java.util.List;
+import java.util.Map;
 
-public interface IFacilityService extends IService<Facility>{
-    List<Facility> getListFacilityMaintenance();
+public interface IFacilityService{
+    void addNewFacility(Facility object,int countOfUses);
+
+    Map<Facility,Integer> getListFacilityMaintenance();
+
+    Map<Facility,Integer> getListFacility();
+
+    void returnMainMenu();
 }

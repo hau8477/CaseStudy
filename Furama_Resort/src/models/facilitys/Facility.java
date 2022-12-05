@@ -66,4 +66,6 @@ public abstract class Facility {
                 ", maxPerson=" + maxPerson +
                 ", rentalType='" + rentalType + '\'';
     }
+
+
 }

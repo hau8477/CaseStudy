@@ -2,27 +2,32 @@ package services.impl;
 
 import models.facilitys.Facility;
 import services.IFacilityService;
+import views.furama_menu.facility_view.FacilityView;
 
-import java.util.List;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class FacilityService implements IFacilityService {
+    private static final Map<Facility,Integer> listFacility = new LinkedHashMap<>();
+
+
     @Override
-    public List<Facility> getListFacilityMaintenance() {
+    public void addNewFacility(Facility object,int countOfUses) {
+        listFacility.put(object,countOfUses);
+    }
+
+    @Override
+    public Map<Facility, Integer> getListFacilityMaintenance() {
         return null;
     }
 
     @Override
-    public void addNew(Facility object) {
-
-    }
-
-    @Override
-    public List<Facility> getList() {
-        return null;
+    public Map<Facility, Integer> getListFacility() {
+        return listFacility;
     }
 
     @Override
     public void returnMainMenu() {
-
+        FacilityView.displayFacilityMenu();
     }
 }

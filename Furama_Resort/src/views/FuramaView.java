@@ -1,6 +1,7 @@
 package views;
 
 import views.furama_menu.*;
+import views.furama_menu.facility_view.FacilityView;
 
 import java.util.Scanner;
 
