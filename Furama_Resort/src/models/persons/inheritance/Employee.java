@@ -6,14 +6,14 @@ public class Employee extends Person {
     private String employeeID;
     private String level;
     private String position;
-    private double salary;
+    private String salary;
 
     public Employee(){
 
     }
 
     public Employee(String fullName, String dayOfBirth, String gender, String citizenID, String phoneNumber,
-                    String email, String employeeID, String level, String position, double salary) {
+                    String email, String employeeID, String level, String position, String salary) {
         super(fullName, dayOfBirth, gender, citizenID, phoneNumber, email);
         this.employeeID = employeeID;
         this.level = level;
@@ -45,11 +45,11 @@ public class Employee extends Person {
         this.position = position;
     }
 
-    public double getSalary() {
+    public String getSalary() {
         return salary;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(String salary) {
         this.salary = salary;
     }
 

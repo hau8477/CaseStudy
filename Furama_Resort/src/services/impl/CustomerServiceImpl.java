@@ -16,7 +16,6 @@ public class CustomerServiceImpl implements ICustomerService {
             if(customer1.getCustomerID().equals(customer.getCustomerID())){
                 customer1.setAll(customer.getFullName(),customer.getDayOfBirth(),customer.getGender(),
                         customer.getCitizenID(),customer.getPhoneNumber(),customer.getEmail());
-                customer1.setCustomerID(customer.getCustomerID());
                 customer1.setCustomerType(customer.getCustomerType());
                 customer1.setAddress(customer.getAddress());
                 break;

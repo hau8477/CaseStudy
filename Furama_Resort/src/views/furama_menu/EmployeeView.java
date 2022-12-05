@@ -52,7 +52,7 @@ public class EmployeeView {
                     System.out.print("Enter position: ");
                     String position = scanner.nextLine();
                     System.out.print("Enter salary: ");
-                    double salary = Double.parseDouble(scanner.nextLine());
+                    String salary = scanner.nextLine();
 
                     Employee employee = new Employee(fullName, dayOfBirth, gender, citizenID,
                             phoneNumber, email, employeeID, level, position, salary);
@@ -84,7 +84,7 @@ public class EmployeeView {
                     System.out.print("Enter new position: ");
                     String positionUpdate = scanner.nextLine();
                     System.out.print("Enter new salary: ");
-                    double salaryUpdate = Double.parseDouble(scanner.nextLine());
+                    String salaryUpdate = scanner.nextLine();
 
                     Employee employeeUpdate = new Employee(fullNameUpdate, dayOfBirthUpdate, genderUpdate, citizenIDUpdate,
                             phoneNumberUpdate, emailUpdate, employeeIDUpdate, levelUpdate, positionUpdate, salaryUpdate);
