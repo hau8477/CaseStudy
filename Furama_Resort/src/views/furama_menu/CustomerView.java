@@ -33,20 +33,28 @@ public class CustomerView {
                 case 2:
                     System.out.print("Enter full name employee: ");
                     String fullName = scanner.nextLine();
+
                     System.out.print("Enter day of birth: ");
                     String dayOfBirth = scanner.nextLine();
+
                     System.out.print("Enter gender: ");
                     String gender = scanner.nextLine();
+
                     System.out.print("Enter citizen ID: ");
                     String citizenID = scanner.nextLine();
+
                     System.out.print("Enter phone number: ");
                     String phoneNumber = scanner.nextLine();
+
                     System.out.print("Enter email: ");
                     String email = scanner.nextLine();
+
                     System.out.print("Enter customer ID: ");
                     String customerID = scanner.nextLine();
+
                     System.out.print("Enter customer type: ");
                     String customerType = scanner.nextLine();
+
                     System.out.print("Enter customer address: ");
                     String address = scanner.nextLine();
 
@@ -58,20 +66,28 @@ public class CustomerView {
                 case 3:
                     System.out.print("Enter customer ID want update: ");
                     String customerIDUpdate = scanner.nextLine();
+
                     System.out.print("Enter full name employee: ");
                     String fullNameUpdate = scanner.nextLine();
+
                     System.out.print("Enter day of birth: ");
                     String dayOfBirthUpdate = scanner.nextLine();
+
                     System.out.print("Enter gender: ");
                     String genderUpdate = scanner.nextLine();
+
                     System.out.print("Enter citizen ID: ");
                     String citizenIDUpdate = scanner.nextLine();
+
                     System.out.print("Enter phone number: ");
                     String phoneNumberUpdate = scanner.nextLine();
+
                     System.out.print("Enter email: ");
                     String emailUpdate = scanner.nextLine();
+
                     System.out.print("Enter customer type: ");
                     String customerTypeUpdate = scanner.nextLine();
+
                     System.out.print("Enter customer address: ");
                     String addressUpdate = scanner.nextLine();
 
@@ -82,6 +98,7 @@ public class CustomerView {
                     break;
                 case 4:
                     System.out.println("Goodbye customers and see you again!");
+
                     customerController.returnMainMenu();
                     break;
                 default:

@@ -7,7 +7,7 @@ import java.util.List;
 
 public class FacilityService implements IFacilityService {
     @Override
-    public List<Facility> displayFacilityMaintenance() {
+    public List<Facility> getListFacilityMaintenance() {
         return null;
     }
 
