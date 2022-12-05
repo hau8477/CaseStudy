@@ -1,0 +1,23 @@
+package services.impl;
+
+import models.booking.Booking;
+import services.IBookingService;
+
+import java.util.List;
+
+public class BookingServiceImpl implements IBookingService {
+    @Override
+    public void addNew(Booking object) {
+
+    }
+
+    @Override
+    public List<Booking> displayList() {
+        return null;
+    }
+
+    @Override
+    public void returnMainMenu() {
+
+    }
+}
