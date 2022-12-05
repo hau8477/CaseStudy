@@ -2,7 +2,6 @@ package views.furama_menu.facility_view;
 
 import controllers.FacilityController;
 import models.facilitys.Facility;
-import views.FuramaView;
 
 import java.util.Map;
 import java.util.Scanner;
@@ -32,7 +31,7 @@ public class FacilityView {
                     }
                     break;
                 case 2:
-                    FacilityMenu.displayMenu();
+                    FacilityAddNewMenu.displayMenu();
                     break;
                 case 3:
                     break;

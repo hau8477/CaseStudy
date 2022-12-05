@@ -6,7 +6,7 @@ import models.facilitys.inheritance.Villa;
 
 import java.util.Scanner;
 
-public class FacilityMenu {
+public class FacilityAddNewMenu {
     private static final Scanner scanner = new Scanner(System.in);
 
     private static final FacilityController facilityController = new FacilityController();
