@@ -5,7 +5,7 @@ import services.IFacilityService;
 
 import java.util.List;
 
-public class FacilityServiceImpl implements IFacilityService {
+public class FacilityService implements IFacilityService {
     @Override
     public List<Facility> displayFacilityMaintenance() {
         return null;

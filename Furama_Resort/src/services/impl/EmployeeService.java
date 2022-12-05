@@ -7,7 +7,7 @@ import views.FuramaView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmployeeServiceImpl implements IEmployeeService {
+public class EmployeeService implements IEmployeeService {
     private final List<Employee> employees = new ArrayList<>();
 
     @Override

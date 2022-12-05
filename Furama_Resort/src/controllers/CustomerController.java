@@ -2,13 +2,13 @@ package controllers;
 
 import models.persons.inheritance.Customer;
 import services.ICustomerService;
-import services.impl.CustomerServiceImpl;
+import services.impl.CustomerService;
 import views.FuramaView;
 
 import java.util.List;
 
 public class CustomerController {
-    private static final ICustomerService customerService = new CustomerServiceImpl();
+    private static final ICustomerService customerService = new CustomerService();
 
     public List<Customer> displayList(){
         return customerService.getList();

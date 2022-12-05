@@ -2,12 +2,12 @@ package controllers;
 
 import models.persons.inheritance.Employee;
 import services.IEmployeeService;
-import services.impl.EmployeeServiceImpl;
+import services.impl.EmployeeService;
 
 import java.util.List;
 
 public class EmployeeController {
-    private final IEmployeeService employeeService = new EmployeeServiceImpl();
+    private final IEmployeeService employeeService = new EmployeeService();
 
     public List<Employee> displayList(){
         return this.employeeService.getList();

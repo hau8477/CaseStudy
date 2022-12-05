@@ -7,7 +7,7 @@ import views.FuramaView;
 import java.util.LinkedList;
 import java.util.List;
 
-public class CustomerServiceImpl implements ICustomerService {
+public class CustomerService implements ICustomerService {
     private static final List<Customer> customers = new LinkedList<>();
 
     @Override
