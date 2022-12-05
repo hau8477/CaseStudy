@@ -10,7 +10,7 @@ public class EmployeeController {
     private final IEmployeeService employeeService = new EmployeeServiceImpl();
 
     public List<Employee> displayList(){
-        return this.employeeService.displayList();
+        return this.employeeService.getList();
     }
 
     public void addEmployee(Employee employee) {

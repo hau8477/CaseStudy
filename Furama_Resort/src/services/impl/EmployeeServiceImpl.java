@@ -53,7 +53,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
     }
 
     @Override
-    public List<Employee> displayList() {
+    public List<Employee> getList() {
         return employees;
     }
 

@@ -11,7 +11,7 @@ public class CustomerController {
     private static final ICustomerService customerService = new CustomerServiceImpl();
 
     public List<Customer> displayList(){
-        return customerService.displayList();
+        return customerService.getList();
     }
 
     public void addCustomer(Customer customer){

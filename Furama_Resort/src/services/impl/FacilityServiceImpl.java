@@ -17,7 +17,7 @@ public class FacilityServiceImpl implements IFacilityService {
     }
 
     @Override
-    public List<Facility> displayList() {
+    public List<Facility> getList() {
         return null;
     }
 

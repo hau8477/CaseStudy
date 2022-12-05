@@ -34,7 +34,7 @@ public class CustomerServiceImpl implements ICustomerService {
     }
 
     @Override
-    public List<Customer> displayList() {
+    public List<Customer> getList() {
         return customers;
     }
 

@@ -12,7 +12,7 @@ public class BookingService implements IBookingService {
     }
 
     @Override
-    public List<Booking> displayList() {
+    public List<Booking> getList() {
         return null;
     }
 
