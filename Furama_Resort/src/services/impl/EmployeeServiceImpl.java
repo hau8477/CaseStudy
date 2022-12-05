@@ -13,13 +13,9 @@ public class EmployeeServiceImpl implements IEmployeeService {
     @Override
     public void editEmployee(Employee employee) {
         for (Employee employee1 : employees) {
-            if (employee1.getEmployeeID().equals(employee.getEmployeeID())) {
-                employee1.setFullName(employee.getFullName());
-                employee1.setDayOfBirth(employee.getDayOfBirth());
-                employee1.setGender(employee.getGender());
-                employee1.setCitizenID(employee.getCitizenID());
-                employee1.setPhoneNumber(employee.getPhoneNumber());
-                employee1.setEmail(employee.getEmail());
+            if (employee1.getCitizenID().equals(employee.getCitizenID())) {
+                employee1.setAll(employee.getFullName(),employee.getDayOfBirth(),employee.getGender(),employee.getCitizenID(),
+                        employee.getPhoneNumber(),employee.getEmail());
                 employee1.setLevel(employee.getLevel());
                 employee1.setPosition(employee.getPosition());
                 employee1.setSalary(employee.getSalary());
@@ -48,7 +44,8 @@ public class EmployeeServiceImpl implements IEmployeeService {
     @Override
     public void addNew(Employee object) {
         for (Employee employee : employees) {
-            if (employee.getEmployeeID().equals(object.getEmployeeID())) {
+            if (employee.getEmployeeID().equals(object.getEmployeeID()) ||
+                    employee.getCitizenID().equals(object.getCitizenID())) {
                 return;
             }
         }

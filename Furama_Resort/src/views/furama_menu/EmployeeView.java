@@ -2,7 +2,6 @@ package views.furama_menu;
 
 import controllers.EmployeeController;
 import models.persons.inheritance.Employee;
-import views.FuramaView;
 
 import java.util.List;
 import java.util.Scanner;
@@ -10,7 +9,7 @@ import java.util.Scanner;
 public class EmployeeView {
     private static final Scanner scanner = new Scanner(System.in);
 
-    private static EmployeeController employeeController = new EmployeeController();
+    private static final EmployeeController employeeController = new EmployeeController();
 
     public static void displayEmployeeMenu() {
         int choice;
@@ -28,6 +27,7 @@ public class EmployeeView {
             switch (choice) {
                 case 1:
                     List<Employee> employees = employeeController.displayList();
+
                     for (Employee employee : employees) {
                         System.out.println(employee);
                     }
@@ -56,6 +56,7 @@ public class EmployeeView {
 
                     Employee employee = new Employee(fullName, dayOfBirth, gender, citizenID,
                             phoneNumber, email, employeeID, level, position, salary);
+
                     employeeController.addEmployee(employee);
                     break;
                 case 3:
@@ -66,27 +67,28 @@ public class EmployeeView {
                 case 4:
                     System.out.print("Enter employee ID want to update: ");
                     String employeeIDUpdate = scanner.nextLine();
-                    System.out.print("Enter full name employee: ");
+                    System.out.print("Enter new full name employee: ");
                     String fullNameUpdate = scanner.nextLine();
-                    System.out.print("Enter day of birth: ");
+                    System.out.print("Enter new day of birth: ");
                     String dayOfBirthUpdate = scanner.nextLine();
-                    System.out.print("Enter gender: ");
+                    System.out.print("Enter new gender: ");
                     String genderUpdate = scanner.nextLine();
-                    System.out.print("Enter citizen ID: ");
+                    System.out.print("Enter new citizen ID: ");
                     String citizenIDUpdate = scanner.nextLine();
-                    System.out.print("Enter phone number: ");
+                    System.out.print("Enter new phone number: ");
                     String phoneNumberUpdate = scanner.nextLine();
-                    System.out.print("Enter email: ");
+                    System.out.print("Enter new email: ");
                     String emailUpdate = scanner.nextLine();
-                    System.out.print("Enter level: ");
+                    System.out.print("Enter new level: ");
                     String levelUpdate = scanner.nextLine();
-                    System.out.print("Enter position: ");
+                    System.out.print("Enter new position: ");
                     String positionUpdate = scanner.nextLine();
-                    System.out.print("Enter salary: ");
+                    System.out.print("Enter new salary: ");
                     double salaryUpdate = Double.parseDouble(scanner.nextLine());
 
                     Employee employeeUpdate = new Employee(fullNameUpdate, dayOfBirthUpdate, genderUpdate, citizenIDUpdate,
                             phoneNumberUpdate, emailUpdate, employeeIDUpdate, levelUpdate, positionUpdate, salaryUpdate);
+
                     employeeController.editEmployee(employeeUpdate);
                     break;
                 case 5:

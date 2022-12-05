@@ -11,7 +11,8 @@ public abstract class Person {
     public Person() {
     }
 
-    public Person(String fullName, String dayOfBirth, String gender, String citizenID, String phoneNumber, String email) {
+    public Person(String fullName, String dayOfBirth, String gender,
+                  String citizenID, String phoneNumber, String email) {
         this.fullName = fullName;
         this.dayOfBirth = dayOfBirth;
         this.gender = gender;
@@ -66,6 +67,16 @@ public abstract class Person {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void setAll(String fullName, String dayOfBirth,
+                       String gender, String citizenID, String phoneNumber, String email){
+        this.setFullName(fullName);
+        this.setDayOfBirth(dayOfBirth);
+        this.setGender(gender);
+        this.setPhoneNumber(phoneNumber);
+        this.setEmail(email);
+
     }
 
     @Override
