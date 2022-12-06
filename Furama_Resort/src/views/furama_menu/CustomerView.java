@@ -31,68 +31,14 @@ public class CustomerView {
                     }
                     break;
                 case 2:
-                    System.out.print("Enter full name employee: ");
-                    String fullName = scanner.nextLine();
-
-                    System.out.print("Enter day of birth: ");
-                    String dayOfBirth = scanner.nextLine();
-
-                    System.out.print("Enter gender: ");
-                    String gender = scanner.nextLine();
-
-                    System.out.print("Enter citizen ID: ");
-                    String citizenID = scanner.nextLine();
-
-                    System.out.print("Enter phone number: ");
-                    String phoneNumber = scanner.nextLine();
-
-                    System.out.print("Enter email: ");
-                    String email = scanner.nextLine();
-
                     System.out.print("Enter customer ID: ");
-                    String customerID = scanner.nextLine();
-
-                    System.out.print("Enter customer type: ");
-                    String customerType = scanner.nextLine();
-
-                    System.out.print("Enter customer address: ");
-                    String address = scanner.nextLine();
-
-                    Customer customer = new Customer(fullName,dayOfBirth,gender,citizenID,phoneNumber,
-                            email,customerID,customerType,address);
+                    Customer customer = addNewCustomer();
 
                     customerController.addCustomer(customer);
                     break;
                 case 3:
-                    System.out.print("Enter customer ID want update: ");
-                    String customerIDUpdate = scanner.nextLine();
-
-                    System.out.print("Enter full name employee: ");
-                    String fullNameUpdate = scanner.nextLine();
-
-                    System.out.print("Enter day of birth: ");
-                    String dayOfBirthUpdate = scanner.nextLine();
-
-                    System.out.print("Enter gender: ");
-                    String genderUpdate = scanner.nextLine();
-
-                    System.out.print("Enter citizen ID: ");
-                    String citizenIDUpdate = scanner.nextLine();
-
-                    System.out.print("Enter phone number: ");
-                    String phoneNumberUpdate = scanner.nextLine();
-
-                    System.out.print("Enter email: ");
-                    String emailUpdate = scanner.nextLine();
-
-                    System.out.print("Enter customer type: ");
-                    String customerTypeUpdate = scanner.nextLine();
-
-                    System.out.print("Enter customer address: ");
-                    String addressUpdate = scanner.nextLine();
-
-                    Customer customerUpdate = new Customer(fullNameUpdate,dayOfBirthUpdate,genderUpdate,
-                            citizenIDUpdate,phoneNumberUpdate,emailUpdate,customerIDUpdate,customerTypeUpdate,addressUpdate);
+                    System.out.print("Enter customer ID want to update: ");
+                    Customer customerUpdate = addNewCustomer();
 
                     customerController.editCustomer(customerUpdate);
                     break;
@@ -103,5 +49,36 @@ public class CustomerView {
                     System.err.println("You entered the wrong choice, please re-enter!");
             }
         } while (true);
+    }
+
+    private static Customer addNewCustomer(){
+        String customerID = scanner.nextLine();
+
+        System.out.print("Enter full name customer: ");
+        String fullName = scanner.nextLine();
+
+        System.out.print("Enter day of birth: ");
+        String dayOfBirth = scanner.nextLine();
+
+        System.out.print("Enter gender: ");
+        String gender = scanner.nextLine();
+
+        System.out.print("Enter citizen ID: ");
+        String citizenID = scanner.nextLine();
+
+        System.out.print("Enter phone number: ");
+        String phoneNumber = scanner.nextLine();
+
+        System.out.print("Enter email: ");
+        String email = scanner.nextLine();
+
+        System.out.print("Enter customer type: ");
+        String customerType = scanner.nextLine();
+
+        System.out.print("Enter customer address: ");
+        String address = scanner.nextLine();
+
+        return new Customer(fullName,dayOfBirth,gender,citizenID,phoneNumber,
+                email,customerID,customerType,address);
     }
 }

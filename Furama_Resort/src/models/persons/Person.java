@@ -8,10 +8,10 @@ public abstract class Person {
     private String phoneNumber;
     private String email;
 
-    public Person() {
+    protected Person() {
     }
 
-    public Person(String fullName, String dayOfBirth, String gender,
+    protected Person(String fullName, String dayOfBirth, String gender,
                   String citizenID, String phoneNumber, String email) {
         this.fullName = fullName;
         this.dayOfBirth = dayOfBirth;
@@ -74,6 +74,7 @@ public abstract class Person {
         this.setFullName(fullName);
         this.setDayOfBirth(dayOfBirth);
         this.setGender(gender);
+        this.citizenID = citizenID;
         this.setPhoneNumber(phoneNumber);
         this.setEmail(email);
 

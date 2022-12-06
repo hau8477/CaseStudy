@@ -25,7 +25,7 @@ public class EmployeeController {
         this.employeeService.editEmployee(employee);
     }
 
-    public void returnMainMenu(){
-        this.employeeService.returnMainMenu();
+    public boolean checkID(String id){
+        return employeeService.checkID(id);
     }
 }

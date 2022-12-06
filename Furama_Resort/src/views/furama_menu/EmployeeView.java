@@ -33,38 +33,8 @@ public class EmployeeView {
                     }
                     break;
                 case 2:
-                    System.out.print("Enter full name employee: ");
-                    String fullName = scanner.nextLine();
-
-                    System.out.print("Enter day of birth: ");
-                    String dayOfBirth = scanner.nextLine();
-
-                    System.out.print("Enter gender: ");
-                    String gender = scanner.nextLine();
-
-                    System.out.print("Enter citizen ID: ");
-                    String citizenID = scanner.nextLine();
-
-                    System.out.print("Enter phone number: ");
-                    String phoneNumber = scanner.nextLine();
-
-                    System.out.print("Enter email: ");
-                    String email = scanner.nextLine();
-
                     System.out.print("Enter employee ID: ");
-                    String employeeID = scanner.nextLine();
-
-                    System.out.print("Enter level: ");
-                    String level = scanner.nextLine();
-
-                    System.out.print("Enter position: ");
-                    String position = scanner.nextLine();
-
-                    System.out.print("Enter salary: ");
-                    String salary = scanner.nextLine();
-
-                    Employee employee = new Employee(fullName, dayOfBirth, gender, citizenID,
-                            phoneNumber, email, employeeID, level, position, salary);
+                    Employee employee = addNewEmployee();
 
                     employeeController.addEmployee(employee);
                     break;
@@ -76,37 +46,7 @@ public class EmployeeView {
                     break;
                 case 4:
                     System.out.print("Enter employee ID want to update: ");
-                    String employeeIDUpdate = scanner.nextLine();
-
-                    System.out.print("Enter new full name employee: ");
-                    String fullNameUpdate = scanner.nextLine();
-
-                    System.out.print("Enter new day of birth: ");
-                    String dayOfBirthUpdate = scanner.nextLine();
-
-                    System.out.print("Enter new gender: ");
-                    String genderUpdate = scanner.nextLine();
-
-                    System.out.print("Enter new citizen ID: ");
-                    String citizenIDUpdate = scanner.nextLine();
-
-                    System.out.print("Enter new phone number: ");
-                    String phoneNumberUpdate = scanner.nextLine();
-
-                    System.out.print("Enter new email: ");
-                    String emailUpdate = scanner.nextLine();
-
-                    System.out.print("Enter new level: ");
-                    String levelUpdate = scanner.nextLine();
-
-                    System.out.print("Enter new position: ");
-                    String positionUpdate = scanner.nextLine();
-
-                    System.out.print("Enter new salary: ");
-                    String salaryUpdate = scanner.nextLine();
-
-                    Employee employeeUpdate = new Employee(fullNameUpdate, dayOfBirthUpdate, genderUpdate, citizenIDUpdate,
-                            phoneNumberUpdate, emailUpdate, employeeIDUpdate, levelUpdate, positionUpdate, salaryUpdate);
+                    Employee employeeUpdate = addNewEmployee();
 
                     employeeController.editEmployee(employeeUpdate);
                     break;
@@ -117,5 +57,39 @@ public class EmployeeView {
                     System.err.println("You entered the wrong choice, please re-enter!");
             }
         } while (true);
+    }
+
+    private static Employee addNewEmployee() {
+        String employeeID = scanner.nextLine();
+
+        System.out.print("Enter full name employee: ");
+        String fullName = scanner.nextLine();
+
+        System.out.print("Enter day of birth: ");
+        String dayOfBirth = scanner.nextLine();
+
+        System.out.print("Enter gender: ");
+        String gender = scanner.nextLine();
+
+        System.out.print("Enter citizen ID: ");
+        String citizenID = scanner.nextLine();
+
+        System.out.print("Enter phone number: ");
+        String phoneNumber = scanner.nextLine();
+
+        System.out.print("Enter email: ");
+        String email = scanner.nextLine();
+
+        System.out.print("Enter level: ");
+        String level = scanner.nextLine();
+
+        System.out.print("Enter position: ");
+        String position = scanner.nextLine();
+
+        System.out.print("Enter salary: ");
+        String salary = scanner.nextLine();
+
+        return new Employee(fullName, dayOfBirth, gender, citizenID,
+                phoneNumber, email, employeeID, level, position, salary);
     }
 }

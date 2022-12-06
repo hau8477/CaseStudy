@@ -3,21 +3,32 @@ package models.facilitys;
 import java.util.Objects;
 
 public abstract class Facility {
+    private String serviceID;
     private String nameService;
     private String useArea;
     private String rentCost;
     private String maxPerson;
     private String rentalType;
 
-    public Facility() {
+    protected Facility() {
     }
 
-    public Facility(String nameService, String useArea, String rentCost, String maxPerson, String rentalType) {
+    public Facility(String serviceID, String nameService,
+                    String useArea, String rentCost, String maxPerson, String rentalType) {
+        this.serviceID = serviceID;
         this.nameService = nameService;
         this.useArea = useArea;
         this.rentCost = rentCost;
         this.maxPerson = maxPerson;
         this.rentalType = rentalType;
+    }
+
+    public String getServiceID() {
+        return serviceID;
+    }
+
+    public void setServiceID(String serviceID) {
+        this.serviceID = serviceID;
     }
 
     public String getNameService() {
@@ -65,23 +76,22 @@ public abstract class Facility {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Facility facility = (Facility) o;
-        return Objects.equals(nameService, facility.nameService) && Objects.equals(useArea, facility.useArea)
-                && Objects.equals(rentCost, facility.rentCost) && Objects.equals(maxPerson, facility.maxPerson)
-                && Objects.equals(rentalType, facility.rentalType);
+        return Objects.equals(serviceID, facility.serviceID) && Objects.equals(nameService, facility.nameService) && Objects.equals(useArea, facility.useArea) && Objects.equals(rentCost, facility.rentCost) && Objects.equals(maxPerson, facility.maxPerson) && Objects.equals(rentalType, facility.rentalType);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nameService, useArea, rentCost, maxPerson, rentalType);
+        return Objects.hash(serviceID, nameService, useArea, rentCost, maxPerson, rentalType);
     }
 
     @Override
     public String toString() {
-        return "nameService='" + nameService + '\'' +
-                ", useArea=" + useArea +
-                ", rentCost=" + rentCost +
-                ", maxPerson=" + maxPerson +
+        return "Facility{" +
+                "serviceID='" + serviceID + '\'' +
+                ", nameService='" + nameService + '\'' +
+                ", useArea='" + useArea + '\'' +
+                ", rentCost='" + rentCost + '\'' +
+                ", maxPerson='" + maxPerson + '\'' +
                 ", rentalType='" + rentalType + '\'';
     }
-
 }

@@ -1,8 +1,8 @@
 package services.impl;
 
 import models.persons.inheritance.Customer;
+import models.persons.inheritance.Employee;
 import services.ICustomerService;
-import views.FuramaView;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -12,6 +12,10 @@ public class CustomerService implements ICustomerService {
 
     @Override
     public void editCustomer(Customer customer) {
+        if(!checkID(customer.getCustomerID())){
+            System.err.println("Employee ID does not exist!");
+            return;
+        }
         for (Customer customer1:customers) {
             if(customer1.getCustomerID().equals(customer.getCustomerID())){
                 customer1.setAll(customer.getFullName(),customer.getDayOfBirth(),customer.getGender(),
@@ -25,10 +29,9 @@ public class CustomerService implements ICustomerService {
 
     @Override
     public void addNew(Customer object) {
-        for (Customer customer: customers) {
-            if (customer.getCustomerID().equals(object.getCustomerID())){
-                return;
-            }
+        if(checkID(object.getCustomerID())){
+            System.err.println("Employee ID already exist!");
+            return;
         }
         customers.add(object);
     }
@@ -38,8 +41,12 @@ public class CustomerService implements ICustomerService {
         return customers;
     }
 
-    @Override
-    public void returnMainMenu() {
-        FuramaView.displayMainMenu();
+    public boolean checkID(String id){
+        for (Customer customer : customers) {
+            if(id.equals(customer.getCustomerID())){
+                return true;
+            }
+        }
+        return false;
     }
 }

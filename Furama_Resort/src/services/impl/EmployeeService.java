@@ -1,8 +1,8 @@
 package services.impl;
 
+import models.persons.inheritance.Customer;
 import models.persons.inheritance.Employee;
 import services.IEmployeeService;
-import views.FuramaView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,10 +12,15 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public void editEmployee(Employee employee) {
+        if (!checkID(employee.getEmployeeID())){
+            System.err.println("Employee ID does not exist!");
+            return;
+        }
         for (Employee employee1 : employees) {
-            if (employee1.getCitizenID().equals(employee.getCitizenID())) {
-                employee1.setAll(employee.getFullName(),employee.getDayOfBirth(),employee.getGender(),employee.getCitizenID(),
-                        employee.getPhoneNumber(),employee.getEmail());
+            if (employee1.getEmployeeID().equals(employee.getEmployeeID())) {
+                employee1.setAll(employee.getFullName(), employee.getDayOfBirth(), employee.getGender(),
+                        employee.getCitizenID(),
+                        employee.getPhoneNumber(), employee.getEmail());
                 employee1.setLevel(employee.getLevel());
                 employee1.setPosition(employee.getPosition());
                 employee1.setSalary(employee.getSalary());
@@ -26,7 +31,11 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public void deleteEmployee(String employeeID) {
-        Employee employeeDelete = null;
+        if (!checkID(employeeID)){
+            System.err.println("Employee ID does not exist!");
+            return;
+        }
+            Employee employeeDelete = null;
 
         for (Employee employee : employees) {
             if (employee.getEmployeeID().equals(employeeID)) {
@@ -43,11 +52,9 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public void addNew(Employee object) {
-        for (Employee employee : employees) {
-            if (employee.getEmployeeID().equals(object.getEmployeeID()) ||
-                    employee.getCitizenID().equals(object.getCitizenID())) {
-                return;
-            }
+        if (checkID(object.getEmployeeID())) {
+            System.err.println("Employee ID already exists!");
+            return;
         }
         employees.add(object);
     }
@@ -57,8 +64,12 @@ public class EmployeeService implements IEmployeeService {
         return employees;
     }
 
-    @Override
-    public void returnMainMenu() {
-        FuramaView.displayMainMenu();
+    public boolean checkID(String id) {
+        for (Employee employee : employees) {
+            if (id.equals(employee.getEmployeeID())) {
+                return true;
+            }
+        }
+        return false;
     }
 }

@@ -15,9 +15,4 @@ public class BookingService implements IBookingService {
     public List<Booking> getList() {
         return null;
     }
-
-    @Override
-    public void returnMainMenu() {
-
-    }
 }

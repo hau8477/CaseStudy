@@ -20,8 +20,4 @@ public class FacilityController {
     public Map<Facility, Integer> getListFacilityMaintenance() {
         return facilityService.getListFacilityMaintenance();
     }
-
-    public void returnMainMenu() {
-        facilityService.returnMainMenu();
-    }
 }

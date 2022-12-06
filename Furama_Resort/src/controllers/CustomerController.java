@@ -22,7 +22,7 @@ public class CustomerController {
         customerService.editCustomer(customer);
     }
 
-    public void returnMainMenu(){
-        FuramaView.displayMainMenu();
+    public boolean checkID(String id){
+        return customerService.checkID(id);
     }
 }

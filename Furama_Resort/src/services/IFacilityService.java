@@ -11,5 +11,4 @@ public interface IFacilityService{
 
     Map<Facility,Integer> getListFacility();
 
-    void returnMainMenu();
 }
