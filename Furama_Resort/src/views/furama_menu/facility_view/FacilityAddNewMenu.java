@@ -1,6 +1,7 @@
 package views.furama_menu.facility_view;
 
 import controllers.FacilityController;
+import models.facilitys.Facility;
 import models.facilitys.inheritance.Room;
 import models.facilitys.inheritance.Villa;
 
@@ -47,7 +48,7 @@ public class FacilityAddNewMenu {
                     System.out.print("Enter number floor: ");
                     String floorNumbers = scanner.nextLine();
 
-                    Villa villa = new Villa("Villa", useAreaVilla, rentCostVilla, maxPersonVilla,
+                    Facility villa = new Villa("Villa", useAreaVilla, rentCostVilla, maxPersonVilla,
                             rentalTypeVilla, roomStandard,
                             poolArea, floorNumbers);
                     countOfUsesVilla++;
@@ -69,7 +70,7 @@ public class FacilityAddNewMenu {
                     System.out.print("Enter service included free: ");
                     String freeServiceIncludedRoom = scanner.nextLine();
 
-                    Room room = new Room("Room", useAreaRoom, rentCostRoom, maxPersonRoom,
+                    Facility room = new Room("Room", useAreaRoom, rentCostRoom, maxPersonRoom,
                             rentalTypeRoom, freeServiceIncludedRoom);
                     countOfUsesRoom++;
                     facilityController.addNewFacility(room, countOfUsesRoom);
