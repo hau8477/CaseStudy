@@ -112,12 +112,10 @@ public class EmployeeView {
                     break;
                 case 5:
                     System.out.println("Goodbye customers and see you again!");
-
-                    employeeController.returnMainMenu();
-                    break;
+                    return;
                 default:
                     System.err.println("You entered the wrong choice, please re-enter!");
             }
-        } while (choice != 5);
+        } while (true);
     }
 }

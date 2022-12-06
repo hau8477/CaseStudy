@@ -78,11 +78,10 @@ public class FacilityAddNewMenu {
                     break;
                 case 3:
                     System.out.println("Goodbye customers and see you again!");
-                    FacilityView.displayFacilityMenu();
-                    break;
+                    return;
                 default:
                     System.err.println("You entered the wrong choice, please re-enter!");
             }
-        } while (choice != 3);
+        } while (true);
     }
 }

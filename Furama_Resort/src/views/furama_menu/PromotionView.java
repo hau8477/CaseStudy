@@ -22,12 +22,10 @@ public class PromotionView {
                 case 2:
                 case 3:
                     System.out.println("Goodbye customers and see you again!");
-                    break;
+                    return;
                 default:
                     System.err.println("You entered the wrong choice, please re-enter!");
             }
-        } while (choice != 3);
-
-        FuramaView.displayMainMenu();
+        } while (true);
     }
 }

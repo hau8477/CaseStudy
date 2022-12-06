@@ -98,12 +98,10 @@ public class CustomerView {
                     break;
                 case 4:
                     System.out.println("Goodbye customers and see you again!");
-
-                    customerController.returnMainMenu();
-                    break;
+                    return;
                 default:
                     System.err.println("You entered the wrong choice, please re-enter!");
             }
-        } while (choice != 4);
+        } while (true);
     }
 }
