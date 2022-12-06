@@ -4,6 +4,7 @@ import controllers.FacilityController;
 import models.facilitys.Facility;
 import models.facilitys.inheritance.Room;
 import models.facilitys.inheritance.Villa;
+import views.furama_menu.FacilityView;
 
 import java.util.Scanner;
 

@@ -1,7 +1,8 @@
-package views.furama_menu.facility_view;
+package views.furama_menu;
 
 import controllers.FacilityController;
 import models.facilitys.Facility;
+import views.furama_menu.facility_view.FacilityAddNewMenu;
 
 import java.util.Map;
 import java.util.Scanner;

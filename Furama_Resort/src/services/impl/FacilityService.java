@@ -2,7 +2,7 @@ package services.impl;
 
 import models.facilitys.Facility;
 import services.IFacilityService;
-import views.furama_menu.facility_view.FacilityView;
+import views.furama_menu.FacilityView;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
