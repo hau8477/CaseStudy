@@ -1,17 +1,15 @@
-package services.io.text.file.read_file.impl;
+package services.io.text.file.read_file;
 
 import models.facilitys.Facility;
 import models.facilitys.inheritance.Room;
-import services.io.text.file.read_file.IReadFileFacility;
 
 import java.io.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class ReadFileRoom implements IReadFileFacility {
-    @Override
-    public Map<Facility, Integer> readFile(String path) throws IOException {
-        Map<Facility, Integer> map = new LinkedHashMap<>();
+public class ReadFileRoom{
+    public static Map<Room, Integer> readFile(String path) throws IOException {
+        Map<Room, Integer> map = new LinkedHashMap<>();
         File file = new File(path);
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
 

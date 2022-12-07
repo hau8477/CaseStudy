@@ -14,7 +14,7 @@ public abstract class Facility {
     }
 
     protected Facility(String serviceID, String nameService,
-                    String useArea, String rentCost, String maxPerson, String rentalType) {
+                       String useArea, String rentCost, String maxPerson, String rentalType) {
         this.serviceID = serviceID;
         this.nameService = nameService;
         this.useArea = useArea;
@@ -23,13 +23,18 @@ public abstract class Facility {
         this.rentalType = rentalType;
     }
 
-    protected Facility(String[] array){
+    protected Facility(String[] array) {
         this.serviceID = array[0];
         this.nameService = array[1];
         this.useArea = array[2];
         this.rentCost = array[3];
         this.maxPerson = array[4];
         this.rentalType = array[5];
+    }
+
+    protected String formatCSV() {
+        return serviceID + "," + nameService + "," + useArea + ","
+                + rentCost + "," + maxPerson + "," + rentalType;
     }
 
     public String getServiceID() {

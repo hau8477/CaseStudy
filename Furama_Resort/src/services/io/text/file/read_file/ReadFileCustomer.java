@@ -1,15 +1,13 @@
-package services.io.text.file.read_file.impl;
+package services.io.text.file.read_file;
 
 import models.persons.inheritance.Customer;
-import services.io.text.file.read_file.IReadFileCustomer;
 
 import java.io.*;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ReadFileCustomer implements IReadFileCustomer {
-    @Override
-    public List<Customer> readFile(String path) throws IOException {
+public class ReadFileCustomer{
+    public static List<Customer> readFile(String path) throws IOException {
         List<Customer> customers = new LinkedList<>();
         File file = new File(path);
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));

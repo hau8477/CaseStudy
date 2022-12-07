@@ -1,16 +1,14 @@
-package services.io.text.file.read_file.impl;
+package services.io.text.file.read_file;
 
 import models.persons.inheritance.Employee;
-import services.io.text.file.read_file.IReadFileEmployee;
 
 import java.io.*;
 import java.util.ArrayList;
 
 import java.util.List;
 
-public class ReadFileEmployee implements IReadFileEmployee {
-    @Override
-    public List<Employee> readFile(String path) throws IOException {
+public class ReadFileEmployee{
+    public static List<Employee> readFile(String path) throws IOException {
         List<Employee> employees = new ArrayList<>();
         File file = new File(path);
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
