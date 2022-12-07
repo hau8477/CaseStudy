@@ -8,13 +8,14 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
-public class WriteFileRoom{
+public class WriteFileRoom {
     public static void writeFile(String path, Map<Room, Integer> map) throws IOException {
         File file = new File(path);
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
 
-        for (Map.Entry<Room,Integer> entry:map.entrySet()) {
-            bufferedWriter.write(entry.getKey().formatCSV() + entry.getKey());
+        for (Map.Entry<Room, Integer> entry : map.entrySet()) {
+            String line = entry.getKey().formatCSV() + "," + entry.getKey();
+            bufferedWriter.write(line);
             bufferedWriter.newLine();
         }
 
