@@ -14,6 +14,11 @@ public class Room extends Facility{
         this.freeServiceIncluded = freeServiceIncluded;
     }
 
+    public Room(String[] array){
+        super(array);
+        this.freeServiceIncluded = array[6];
+    }
+
     public String getFreeServiceIncluded() {
         return freeServiceIncluded;
     }

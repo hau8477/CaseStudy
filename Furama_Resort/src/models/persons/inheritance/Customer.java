@@ -18,6 +18,17 @@ public class Customer extends Person {
         this.address = address;
     }
 
+    public Customer(String[] array) {
+        super(array);
+        this.customerID = array[6];
+        this.customerType = array[7];
+        this.address = array[8];
+    }
+    public String formatCSV(){
+        return getFullName() + "," + getDayOfBirth() + "," + getGender() + "," + getCitizenID() + "," + getPhoneNumber()
+                + "," + getEmail() + "," + customerID + "," + customerType + "," + address;
+    }
+
     public String getCustomerID() {
         return customerID;
     }
@@ -41,6 +52,8 @@ public class Customer extends Person {
     public void setAddress(String address) {
         this.address = address;
     }
+
+
 
     @Override
     public String toString() {

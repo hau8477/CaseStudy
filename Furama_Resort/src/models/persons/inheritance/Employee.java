@@ -21,6 +21,19 @@ public class Employee extends Person {
         this.salary = salary;
     }
 
+    public Employee(String[] array){
+        super(array);
+        this.employeeID = array[6];
+        this.level = array[7];
+        this.position = array[8];
+        this.salary = array[9];
+    }
+
+    public String formatCSV(){
+        return getFullName() + "," + getDayOfBirth() + "," + getGender() + "," + getCitizenID() + "," + getPhoneNumber()
+                + "," + getEmail() + "," + employeeID + "," + level + "," + position + "," + salary;
+    }
+
     public String getEmployeeID() {
         return employeeID;
     }

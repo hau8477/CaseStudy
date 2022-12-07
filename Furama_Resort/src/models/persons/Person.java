@@ -12,13 +12,22 @@ public abstract class Person {
     }
 
     protected Person(String fullName, String dayOfBirth, String gender,
-                  String citizenID, String phoneNumber, String email) {
+                     String citizenID, String phoneNumber, String email) {
         this.fullName = fullName;
         this.dayOfBirth = dayOfBirth;
         this.gender = gender;
         this.citizenID = citizenID;
         this.phoneNumber = phoneNumber;
         this.email = email;
+    }
+
+    protected Person(String[] array) {
+        this.fullName = array[0];
+        this.dayOfBirth = array[1];
+        this.gender = array[2];
+        this.citizenID = array[3];
+        this.phoneNumber = array[4];
+        this.email = array[5];
     }
 
     public String getFullName() {
@@ -70,7 +79,7 @@ public abstract class Person {
     }
 
     public void setAll(String fullName, String dayOfBirth,
-                       String gender, String citizenID, String phoneNumber, String email){
+                       String gender, String citizenID, String phoneNumber, String email) {
         this.setFullName(fullName);
         this.setDayOfBirth(dayOfBirth);
         this.setGender(gender);
@@ -87,6 +96,6 @@ public abstract class Person {
                 ", gender='" + gender + '\'' +
                 ", citizenID='" + citizenID + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
-                ", email='" + email + '\'' ;
+                ", email='" + email + '\'';
     }
 }

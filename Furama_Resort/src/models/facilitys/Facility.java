@@ -13,7 +13,7 @@ public abstract class Facility {
     protected Facility() {
     }
 
-    public Facility(String serviceID, String nameService,
+    protected Facility(String serviceID, String nameService,
                     String useArea, String rentCost, String maxPerson, String rentalType) {
         this.serviceID = serviceID;
         this.nameService = nameService;
@@ -21,6 +21,15 @@ public abstract class Facility {
         this.rentCost = rentCost;
         this.maxPerson = maxPerson;
         this.rentalType = rentalType;
+    }
+
+    protected Facility(String[] array){
+        this.serviceID = array[0];
+        this.nameService = array[1];
+        this.useArea = array[2];
+        this.rentCost = array[3];
+        this.maxPerson = array[4];
+        this.rentalType = array[5];
     }
 
     public String getServiceID() {

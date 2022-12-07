@@ -17,6 +17,13 @@ public class Villa extends Facility {
         this.floorNumbers = floorNumbers;
     }
 
+    public Villa(String[] array){
+        super(array);
+        this.roomStandard = array[6];
+        this.poolArea = array[7];
+        this.floorNumbers = array[8];
+    }
+
     public String getRoomStandard() {
         return roomStandard;
     }
