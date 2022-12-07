@@ -28,7 +28,7 @@ public class FacilityView {
                 case 1:
                     Map<Facility, Integer> facilityIntegerMap = facilityController.getListFacility();
                     for (Map.Entry<Facility, Integer> entry : facilityIntegerMap.entrySet()) {
-                        System.out.println(entry);
+                        System.out.println(entry.getKey().toString() + ". Times of use: " + entry.getValue());
                     }
                     break;
                 case 2:

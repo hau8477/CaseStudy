@@ -24,8 +24,8 @@ public class Villa extends Facility {
         this.floorNumbers = array[8];
     }
 
-    public String formatCSV(){
-        return super.formatCSV() + "," + roomStandard + "," + poolArea + "," + floorNumbers;
+    public String formatCSVVilla(){
+        return super.formatCSVFacility() + "," + roomStandard + "," + poolArea + "," + floorNumbers;
     }
 
     public String getRoomStandard() {

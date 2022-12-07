@@ -19,8 +19,8 @@ public class Room extends Facility{
         this.freeServiceIncluded = array[6];
     }
 
-    public String formatCSV(){
-        return super.formatCSV() + "," + freeServiceIncluded;
+    public String formatCSVRoom(){
+        return super.formatCSVFacility() + "," + freeServiceIncluded;
     }
 
     public String getFreeServiceIncluded() {

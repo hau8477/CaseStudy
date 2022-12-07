@@ -32,7 +32,7 @@ public abstract class Facility {
         this.rentalType = array[5];
     }
 
-    protected String formatCSV() {
+    protected String formatCSVFacility() {
         return serviceID + "," + nameService + "," + useArea + ","
                 + rentCost + "," + maxPerson + "," + rentalType;
     }

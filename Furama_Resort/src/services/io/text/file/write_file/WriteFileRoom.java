@@ -14,7 +14,7 @@ public class WriteFileRoom {
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
 
         for (Map.Entry<Room, Integer> entry : map.entrySet()) {
-            String line = entry.getKey().formatCSV() + "," + entry.getKey();
+            String line = entry.getKey().formatCSVRoom() + "," + entry.getValue();
             bufferedWriter.write(line);
             bufferedWriter.newLine();
         }

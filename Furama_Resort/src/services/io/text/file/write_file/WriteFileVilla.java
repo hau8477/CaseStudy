@@ -14,7 +14,7 @@ public class WriteFileVilla {
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
 
         for (Map.Entry<Villa, Integer> entry : map.entrySet()) {
-            String line = entry.getKey().formatCSV() + "," + entry.getValue();
+            String line = entry.getKey().formatCSVVilla() + "," + entry.getValue();
             bufferedWriter.write(line);
             bufferedWriter.newLine();
         }

@@ -16,7 +16,7 @@ import java.util.Map;
 public class FacilityService implements IFacilityService {
     private static final String FILE_ROOM = "src/data/facility/room.csv";
     private static final String FILE_VILLA = "src/data/facility/villa.csv";
-
+    
     @Override
     public void addNewFacility(Facility object, int countOfUses) throws IOException {
         if (object instanceof Room) {
@@ -27,6 +27,7 @@ public class FacilityService implements IFacilityService {
             Map<Villa, Integer> map = ReadFileVilla.readFile(FILE_VILLA);
             map.put((Villa) object, countOfUses);
             WriteFileVilla.writeFile(FILE_VILLA, map);
+
         }
     }
 
@@ -37,6 +38,7 @@ public class FacilityService implements IFacilityService {
 
     @Override
     public Map<Facility, Integer> getListFacility() throws IOException {
+
         Map<Villa, Integer> villa = ReadFileVilla.readFile(FILE_VILLA);
         Map<Room, Integer> room = ReadFileRoom.readFile(FILE_ROOM);
 
