@@ -30,6 +30,9 @@ public class FacilityAddNewMenu {
                     System.out.print("Enter service ID: ");
                     String serviceIDVilla = scanner.nextLine();
 
+                    System.out.print("Enter name service: ");
+                    String nameServiceVilla = scanner.nextLine();
+
                     System.out.print("Enter area use: ");
                     String useAreaVilla = scanner.nextLine();
 
@@ -51,7 +54,7 @@ public class FacilityAddNewMenu {
                     System.out.print("Enter number floor: ");
                     String floorNumbers = scanner.nextLine();
 
-                    Facility villa = new Villa(serviceIDVilla,"Villa", useAreaVilla, rentCostVilla, maxPersonVilla,
+                    Facility villa = new Villa(serviceIDVilla,nameServiceVilla, useAreaVilla, rentCostVilla, maxPersonVilla,
                             rentalTypeVilla, roomStandard,
                             poolArea, floorNumbers);
                     countOfUsesVilla++;
@@ -60,6 +63,9 @@ public class FacilityAddNewMenu {
                 case 2:
                     System.out.print("Enter service ID: ");
                     String serviceIDRoom = scanner.nextLine();
+
+                    System.out.print("Enter name service: ");
+                    String nameServiceRoom = scanner.nextLine();
 
                     System.out.print("Enter area use: ");
                     String useAreaRoom = scanner.nextLine();
@@ -76,7 +82,7 @@ public class FacilityAddNewMenu {
                     System.out.print("Enter service included free: ");
                     String freeServiceIncludedRoom = scanner.nextLine();
 
-                    Facility room = new Room(serviceIDRoom,"Room", useAreaRoom, rentCostRoom, maxPersonRoom,
+                    Facility room = new Room(serviceIDRoom,nameServiceRoom, useAreaRoom, rentCostRoom, maxPersonRoom,
                             rentalTypeRoom, freeServiceIncludedRoom);
                     countOfUsesRoom++;
                     facilityController.addNewFacility(room, countOfUsesRoom);
