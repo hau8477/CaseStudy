@@ -11,7 +11,7 @@ public class RegexForFurama {
 
     public static final String DOUBLE_NUMBER = "^([3-9]\\d|\\d{3,}).\\d{1,2}$";
 
-    public static final String POSITIVE_NUMBER = "^[1-9]+.\\d{1,2}$";
+    public static final String POSITIVE_NUMBER = "^([1-9]|[1-9]\\d+).\\d{1,2}$";
 
     public static final String MAX_PEOPLE = "^[1-9]{1}|1\\d{1}$";
 
@@ -55,7 +55,4 @@ public class RegexForFurama {
     public static boolean validateDateOfBirth(String string){
         return Pattern.matches(DATE_OF_BIRTH,string);
     }
-
-
-
 }

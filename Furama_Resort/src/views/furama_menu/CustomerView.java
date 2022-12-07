@@ -1,6 +1,7 @@
 package views.furama_menu;
 
 import controllers.CustomerController;
+import libs.RegexForFurama;
 import models.persons.inheritance.Customer;
 
 import java.util.List;
@@ -10,7 +11,8 @@ public class CustomerView {
     private static final Scanner scanner = new Scanner(System.in);
 
     private static final CustomerController customerController = new CustomerController();
-    public static void displayCustomerMenu(){
+
+    public static void displayCustomerMenu() {
         int choice;
 
         do {
@@ -26,7 +28,7 @@ public class CustomerView {
                 case 1:
                     List<Customer> customers = customerController.displayList();
 
-                    for (Customer customer:customers) {
+                    for (Customer customer : customers) {
                         System.out.println(customer);
                     }
                     break;
@@ -51,14 +53,13 @@ public class CustomerView {
         } while (true);
     }
 
-    private static Customer addNewCustomer(){
+    private static Customer addNewCustomer() {
         String customerID = scanner.nextLine();
 
         System.out.print("Enter full name customer: ");
         String fullName = scanner.nextLine();
 
-        System.out.print("Enter day of birth: ");
-        String dayOfBirth = scanner.nextLine();
+        String dayOfBirth = checkDateOfBirth();
 
         System.out.print("Enter gender: ");
         String gender = scanner.nextLine();
@@ -78,7 +79,21 @@ public class CustomerView {
         System.out.print("Enter customer address: ");
         String address = scanner.nextLine();
 
-        return new Customer(fullName,dayOfBirth,gender,citizenID,phoneNumber,
-                email,customerID,customerType,address);
+        return new Customer(fullName, dayOfBirth, gender, citizenID, phoneNumber,
+                email, customerID, customerType, address);
+    }
+
+    private static String checkDateOfBirth() {
+        String dayOfBirth;
+        do {
+            System.out.print("Enter day of birth: ");
+            dayOfBirth = scanner.nextLine();
+
+            if (RegexForFurama.validateDateOfBirth(dayOfBirth)) {
+                return dayOfBirth;
+            } else {
+                System.err.println("Day of birth not valid! Re-enter: 12-12-2012.");
+            }
+        } while (true);
     }
 }
