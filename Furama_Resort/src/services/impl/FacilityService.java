@@ -1,6 +1,5 @@
 package services.impl;
 
-import exception.NotFoundException;
 import models.facilitys.Facility;
 import models.facilitys.inheritance.Room;
 import models.facilitys.inheritance.Villa;
@@ -28,7 +27,6 @@ public class FacilityService implements IFacilityService {
             Map<Villa, Integer> map = ReadFileVilla.readFile(FILE_VILLA);
             map.put((Villa) object, countOfUses);
             WriteFileVilla.writeFile(FILE_VILLA, map);
-
         }
     }
 
