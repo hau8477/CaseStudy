@@ -10,7 +10,7 @@ import java.util.List;
 public class CustomerController {
     private static final ICustomerService customerService = new CustomerService();
 
-    public List<Customer> displayList() {
+    public List<Customer> getListCustomer() {
         try {
             return customerService.getList();
         } catch (IOException e) {

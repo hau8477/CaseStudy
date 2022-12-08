@@ -30,7 +30,7 @@ public class CustomerView {
 
             switch (choice) {
                 case 1:
-                    List<Customer> customers = customerController.displayList();
+                    List<Customer> customers = customerController.getListCustomer();
 
                     for (Customer customer : customers) {
                         System.out.println(customer);
