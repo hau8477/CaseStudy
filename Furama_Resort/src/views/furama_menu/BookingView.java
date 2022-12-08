@@ -1,7 +1,6 @@
 package views.furama_menu;
 
 import controllers.BookingController;
-import views.FuramaView;
 
 import java.util.Scanner;
 
@@ -10,7 +9,7 @@ public class BookingView {
 
     private static final BookingController bookingController = new BookingController();
     public static void displayBookingMenu(){
-        int choice;
+        int choice = 0;
 
         do {
             System.out.print("---------------Booking Management---------------\n" +
@@ -18,7 +17,11 @@ public class BookingView {
                     "2. Display list booking.\n" +
                     "3. Return main menu.\n" +
                     "Please enter your choice: ");
-            choice = Integer.parseInt(scanner.nextLine());
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e){
+                System.out.println(e.getMessage());
+            }
 
             switch (choice) {
                 case 1:

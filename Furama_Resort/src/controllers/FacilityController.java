@@ -14,7 +14,7 @@ public class FacilityController {
         try {
             return facilityService.getListFacility();
         } catch (IOException e) {
-            System.err.println("Error");
+            System.err.println("File empty.");
             return null;
         }
     }
@@ -23,7 +23,7 @@ public class FacilityController {
         try {
             facilityService.addNewFacility(object,countOfUses);
         } catch (IOException e) {
-            System.err.println("Error");
+            System.err.println("File empty.");
         }
     }
 

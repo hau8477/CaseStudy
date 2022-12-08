@@ -9,7 +9,7 @@ public class FuramaView {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void displayMainMenu() {
-        int choice;
+        int choice = 0;
 
         do {
             System.out.print("     ---------------------Furama Resort---------------------\n" +
@@ -21,7 +21,11 @@ public class FuramaView {
                     "5. Promotion Management.\n" +
                     "6. Exit.\n" +
                     "Please enter your choice: ");
-            choice = Integer.parseInt(scanner.nextLine());
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e){
+                System.out.println(e.getMessage());
+            }
 
             switch (choice) {
                 case 1:

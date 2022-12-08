@@ -13,7 +13,7 @@ public class CustomerView {
     private static final CustomerController customerController = new CustomerController();
 
     public static void displayCustomerMenu() {
-        int choice;
+        int choice = 0;
 
         do {
             System.out.print("---------------Customer Management---------------\n" +
@@ -22,7 +22,11 @@ public class CustomerView {
                     "3. Edit customer.\n" +
                     "4. Return main menu.\n" +
                     "Please enter your choice: ");
-            choice = Integer.parseInt(scanner.nextLine());
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e){
+                System.out.println(e.getMessage());
+            }
 
             switch (choice) {
                 case 1:

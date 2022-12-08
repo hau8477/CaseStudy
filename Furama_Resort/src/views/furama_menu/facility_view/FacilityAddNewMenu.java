@@ -14,7 +14,7 @@ public class FacilityAddNewMenu {
     private static final FacilityController facilityController = new FacilityController();
 
     public static void displayMenu() {
-        int choice;
+        int choice = 0;
         int countOfUsesVilla = 0;
         int countOfUsesRoom = 0;
 
@@ -24,7 +24,11 @@ public class FacilityAddNewMenu {
                     "2. Add New Room.\n" +
                     "3. Back to menu.\n" +
                     "Please enter your choice: ");
-            choice = Integer.parseInt(scanner.nextLine());
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e){
+                System.out.println(e.getMessage());
+            }
 
             switch (choice) {
                 case 1:

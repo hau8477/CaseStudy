@@ -13,7 +13,7 @@ public class FacilityView {
     private static final FacilityController facilityController = new FacilityController();
 
     public static void displayFacilityMenu() {
-        int choice;
+        int choice = 0;
 
         do {
             System.out.print("---------------Facility Management---------------\n" +
@@ -22,7 +22,11 @@ public class FacilityView {
                     "3. Display list facility maintenance.\n" +
                     "4. Return main menu.\n" +
                     "Please enter your choice: ");
-            choice = Integer.parseInt(scanner.nextLine());
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e){
+                System.out.println(e.getMessage());
+            }
 
             switch (choice) {
                 case 1:

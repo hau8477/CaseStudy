@@ -1,5 +1,6 @@
 package services.impl;
 
+import exception.NotFoundException;
 import models.persons.inheritance.Employee;
 import services.IEmployeeService;
 import services.io_text_file.read_file.ReadFileEmployee;
@@ -79,8 +80,22 @@ public class EmployeeService implements IEmployeeService {
         return ReadFileEmployee.readFile(FILE_EMPLOYEE);
     }
 
-    public boolean checkID(String id) throws IOException {
-        List<Employee> employees = ReadFileEmployee.readFile(FILE_EMPLOYEE);
+    public boolean checkID(String id){
+        List<Employee> employees = null;
+
+        try {
+            employees = ReadFileEmployee.readFile(FILE_EMPLOYEE);
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+
+        if (employees == null) {
+            try {
+                throw new NotFoundException("File empty");
+            } catch (NotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        }
 
         for (Employee employee : employees) {
             if (id.equals(employee.getEmployeeID())) {
@@ -88,7 +103,11 @@ public class EmployeeService implements IEmployeeService {
             }
         }
 
-        WriteFileEmployee.write(FILE_EMPLOYEE, employees);
+        try {
+            WriteFileEmployee.write(FILE_EMPLOYEE, employees);
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
         return false;
     }
 }

@@ -10,11 +10,11 @@ import java.util.List;
 public class EmployeeController {
     private final IEmployeeService employeeService = new EmployeeService();
 
-    public List<Employee> displayList(){
+    public List<Employee> getListEmployee(){
         try {
             return this.employeeService.getList();
         } catch (IOException e) {
-            System.err.println("Error");
+            System.err.println("File empty.");
             return null;
         }
     }
@@ -23,7 +23,7 @@ public class EmployeeController {
         try {
             this.employeeService.addNew(employee);
         } catch (IOException e) {
-            System.err.println("Error");
+            System.err.println("File empty.");
         }
     }
 
@@ -31,7 +31,7 @@ public class EmployeeController {
         try {
             this.employeeService.deleteEmployee(employeeID);
         } catch (IOException e) {
-            System.err.println("Error");
+            System.err.println("File empty.");
         }
     }
 
@@ -39,16 +39,7 @@ public class EmployeeController {
         try {
             this.employeeService.editEmployee(employee);
         } catch (IOException e) {
-            System.err.println("Error");
-        }
-    }
-
-    public boolean checkID(String id){
-        try {
-            return employeeService.checkID(id);
-        } catch (IOException e) {
-            System.err.println("Error");
-            return false;
+            System.err.println("File empty.");
         }
     }
 }

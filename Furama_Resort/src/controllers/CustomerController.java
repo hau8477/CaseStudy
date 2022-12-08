@@ -14,7 +14,7 @@ public class CustomerController {
         try {
             return customerService.getList();
         } catch (IOException e) {
-            System.err.println("Error");
+            System.err.println("File empty.");
             return null;
         }
     }
@@ -23,7 +23,7 @@ public class CustomerController {
         try {
             customerService.addNew(customer);
         } catch (IOException e) {
-            System.err.println("Error");
+            System.err.println("File empty.");
         }
     }
 
@@ -31,16 +31,7 @@ public class CustomerController {
         try {
             customerService.editCustomer(customer);
         } catch (IOException e) {
-            System.err.println("Error");
-        }
-    }
-
-    public boolean checkID(String id) {
-        try {
-            return customerService.checkID(id);
-        } catch (IOException e) {
-            System.err.println("Error");
-            return false;
+            System.err.println("File empty.");
         }
     }
 }

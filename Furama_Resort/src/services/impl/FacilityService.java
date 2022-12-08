@@ -1,5 +1,6 @@
 package services.impl;
 
+import exception.NotFoundException;
 import models.facilitys.Facility;
 import models.facilitys.inheritance.Room;
 import models.facilitys.inheritance.Villa;

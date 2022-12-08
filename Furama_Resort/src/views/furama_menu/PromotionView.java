@@ -1,13 +1,11 @@
 package views.furama_menu;
 
-import views.FuramaView;
-
 import java.util.Scanner;
 
 public class PromotionView {
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
     public static void displayPromotionMenu(){
-        int choice;
+        int choice = 0;
 
         do {
             System.out.print("---------------Promotion Management---------------\n" +
@@ -15,7 +13,11 @@ public class PromotionView {
                     "2. Display list customers get voucher.\n" +
                     "3. Return main menu.\n" +
                     "Please enter your choice: ");
-            choice = Integer.parseInt(scanner.nextLine());
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e){
+                System.out.println(e.getMessage());
+            }
 
             switch (choice) {
                 case 1:

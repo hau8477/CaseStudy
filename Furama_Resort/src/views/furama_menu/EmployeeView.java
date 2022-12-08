@@ -13,7 +13,7 @@ public class EmployeeView {
     private static final EmployeeController employeeController = new EmployeeController();
 
     public static void displayEmployeeMenu() {
-        int choice;
+        int choice = 0;
 
         do {
             System.out.print("---------------Employee Management---------------\n" +
@@ -23,11 +23,15 @@ public class EmployeeView {
                     "4. Edit employee.\n" +
                     "5. Return main menu.\n" +
                     "Please enter your choice: ");
-            choice = Integer.parseInt(scanner.nextLine());
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e){
+                System.out.println(e.getMessage());
+            }
 
             switch (choice) {
                 case 1:
-                    List<Employee> employees = employeeController.displayList();
+                    List<Employee> employees = employeeController.getListEmployee();
 
                     for (Employee employee : employees) {
                         System.out.println(employee);
