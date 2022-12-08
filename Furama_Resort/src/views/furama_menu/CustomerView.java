@@ -24,13 +24,18 @@ public class CustomerView {
                     "Please enter your choice: ");
             try {
                 choice = Integer.parseInt(scanner.nextLine());
-            } catch (NumberFormatException e){
+            } catch (NumberFormatException e) {
                 System.out.println(e.getMessage());
             }
 
             switch (choice) {
                 case 1:
+                    System.out.println("---------------List Customer---------------");
                     List<Customer> customers = customerController.getListCustomer();
+
+                    if (customers.isEmpty()) {
+                        System.out.println("List empty.");
+                    }
 
                     for (Customer customer : customers) {
                         System.out.println(customer);
@@ -38,13 +43,27 @@ public class CustomerView {
                     break;
                 case 2:
                     System.out.print("Enter customer ID: ");
-                    Customer customer = addNewCustomer();
+                    String customerID = scanner.nextLine();
+
+                    if(customerController.checkID(customerID)){
+                        System.out.println("Employee ID already exist!");
+                        break;
+                    }
+
+                    Customer customer = addNewCustomer(customerID);
 
                     customerController.addCustomer(customer);
                     break;
                 case 3:
                     System.out.print("Enter customer ID want to update: ");
-                    Customer customerUpdate = addNewCustomer();
+                    String customerIDUpdate = scanner.nextLine();
+
+                    if(!customerController.checkID(customerIDUpdate)){
+                        System.out.println("Employee ID does not exist!");
+                        break;
+                    }
+
+                    Customer customerUpdate = addNewCustomer(customerIDUpdate);
 
                     customerController.editCustomer(customerUpdate);
                     break;
@@ -57,8 +76,7 @@ public class CustomerView {
         } while (true);
     }
 
-    private static Customer addNewCustomer() {
-        String customerID = scanner.nextLine();
+    private static Customer addNewCustomer(String customerID) {
 
         System.out.print("Enter full name customer: ");
         String fullName = scanner.nextLine();

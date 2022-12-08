@@ -42,4 +42,13 @@ public class EmployeeController {
             System.err.println("File empty.");
         }
     }
+
+    public boolean checkID(String id){
+        try {
+            return employeeService.checkID(id);
+        } catch (IOException e) {
+            System.out.println("Id not valid.");
+            return false;
+        }
+    }
 }

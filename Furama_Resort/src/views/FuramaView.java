@@ -1,12 +1,22 @@
 package views;
 
+import controllers.CustomerController;
+import controllers.FacilityController;
+import models.facilitys.Facility;
+import models.persons.inheritance.Customer;
 import views.furama_menu.*;
 import views.furama_menu.FacilityView;
 
+import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 public class FuramaView {
     private static final Scanner scanner = new Scanner(System.in);
+
+    private static final CustomerController customerController = new CustomerController();
+
+    private static final FacilityController facilityController = new FacilityController();
 
     public static void displayMainMenu() {
         int choice = 0;
@@ -23,8 +33,8 @@ public class FuramaView {
                     "Please enter your choice: ");
             try {
                 choice = Integer.parseInt(scanner.nextLine());
-            } catch (NumberFormatException e){
-                System.out.println(e.getMessage());
+            } catch (NumberFormatException e) {
+                System.err.println(e.getMessage());
             }
 
             switch (choice) {
@@ -38,6 +48,31 @@ public class FuramaView {
                     FacilityView.displayFacilityMenu();
                     break;
                 case 4:
+                    System.out.println("---------------Booking Management---------------\n");
+
+                    List<Customer> customers = customerController.getListCustomer();
+                    Map<Facility, Integer> facilityIntegerMap = facilityController.getListFacility();
+
+                    System.out.println("---------------List Customer---------------");
+
+                    if (customers.isEmpty()) {
+                        System.out.println("List empty.");
+                    }
+
+                    for (Customer customer : customers) {
+                        System.out.println(customer);
+                    }
+
+                    System.out.println("---------------List Facility---------------");
+
+                    if (facilityIntegerMap.isEmpty()) {
+                        System.out.println("List empty.");
+                    }
+
+                    for (Map.Entry<Facility, Integer> entry : facilityIntegerMap.entrySet()) {
+                        System.out.println(entry.getKey().toString() + ". Times of use: " + entry.getValue());
+                    }
+
                     BookingView.displayBookingMenu();
                     break;
                 case 5:

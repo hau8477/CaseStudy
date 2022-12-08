@@ -12,8 +12,7 @@ public class BookingView {
         int choice = 0;
 
         do {
-            System.out.print("---------------Booking Management---------------\n" +
-                    "1. Add new booking.\n" +
+            System.out.print("1. Add new booking.\n" +
                     "2. Display list booking.\n" +
                     "3. Return main menu.\n" +
                     "Please enter your choice: ");

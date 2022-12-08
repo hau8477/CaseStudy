@@ -25,13 +25,18 @@ public class EmployeeView {
                     "Please enter your choice: ");
             try {
                 choice = Integer.parseInt(scanner.nextLine());
-            } catch (NumberFormatException e){
+            } catch (NumberFormatException e) {
                 System.out.println(e.getMessage());
             }
 
             switch (choice) {
                 case 1:
+                    System.out.println("---------------List Employee---------------");
                     List<Employee> employees = employeeController.getListEmployee();
+
+                    if (employees.isEmpty()) {
+                        System.out.println("List empty.");
+                    }
 
                     for (Employee employee : employees) {
                         System.out.println(employee);
@@ -39,7 +44,14 @@ public class EmployeeView {
                     break;
                 case 2:
                     System.out.print("Enter employee ID: ");
-                    Employee employee = addNewEmployee();
+                    String employeeID = scanner.nextLine();
+
+                    if (employeeController.checkID(employeeID)) {
+                        System.out.println("Employee ID already exists.");
+                        break;
+                    }
+
+                    Employee employee = addNewEmployee(employeeID);
 
                     employeeController.addEmployee(employee);
                     break;
@@ -47,12 +59,23 @@ public class EmployeeView {
                     System.out.print("Enter employee ID want to delete: ");
                     String employeeIDDelete = scanner.nextLine();
 
+                    if (!employeeController.checkID(employeeIDDelete)) {
+                        System.out.println("Employee ID does not exists.");
+                        break;
+                    }
+
                     employeeController.deleteEmployee(employeeIDDelete);
                     break;
                 case 4:
                     System.out.print("Enter employee ID want to update: ");
-                    Employee employeeUpdate = addNewEmployee();
+                    String employeeIDUpdate = scanner.nextLine();
 
+                    if (!employeeController.checkID(employeeIDUpdate)) {
+                        System.out.println("Employee ID does not exists.");
+                        break;
+                    }
+
+                    Employee employeeUpdate = addNewEmployee(employeeIDUpdate);
                     employeeController.editEmployee(employeeUpdate);
                     break;
                 case 5:
@@ -64,8 +87,8 @@ public class EmployeeView {
         } while (true);
     }
 
-    private static Employee addNewEmployee() {
-        String employeeID = scanner.nextLine();
+    private static Employee addNewEmployee(String employeeID) {
+
 
         System.out.print("Enter full name employee: ");
         String fullName = scanner.nextLine();

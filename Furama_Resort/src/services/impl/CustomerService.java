@@ -18,7 +18,6 @@ public class CustomerService implements ICustomerService {
         List<Customer> customers = ReadFileCustomer.readFile(FILE_CUSTOMER);
 
         if (!checkID(customer.getCustomerID())) {
-            System.err.println("Employee ID does not exist!");
             return;
         }
         for (Customer customer1 : customers) {
@@ -39,7 +38,6 @@ public class CustomerService implements ICustomerService {
         List<Customer> customers = ReadFileCustomer.readFile(FILE_CUSTOMER);
 
         if (checkID(object.getCustomerID())) {
-            System.err.println("Employee ID already exist!");
             return;
         }
 

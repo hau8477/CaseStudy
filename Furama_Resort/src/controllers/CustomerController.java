@@ -34,4 +34,13 @@ public class CustomerController {
             System.err.println("File empty.");
         }
     }
+
+    public boolean checkID(String id){
+        try {
+            return customerService.checkID(id);
+        } catch (IOException e) {
+            System.out.println("Id not valid.");
+            return false;
+        }
+    }
 }

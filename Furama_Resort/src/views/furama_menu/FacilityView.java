@@ -24,13 +24,19 @@ public class FacilityView {
                     "Please enter your choice: ");
             try {
                 choice = Integer.parseInt(scanner.nextLine());
-            } catch (NumberFormatException e){
+            } catch (NumberFormatException e) {
                 System.out.println(e.getMessage());
             }
 
             switch (choice) {
                 case 1:
+                    System.out.println("---------------List Facility---------------");
                     Map<Facility, Integer> facilityIntegerMap = facilityController.getListFacility();
+
+                    if (facilityIntegerMap.isEmpty()) {
+                        System.out.println("List empty.");
+                    }
+
                     for (Map.Entry<Facility, Integer> entry : facilityIntegerMap.entrySet()) {
                         System.out.println(entry.getKey().toString() + ". Times of use: " + entry.getValue());
                     }

@@ -17,7 +17,6 @@ public class EmployeeService implements IEmployeeService {
         List<Employee> employees = ReadFileEmployee.readFile(FILE_EMPLOYEE);
 
         if (!checkID(employee.getEmployeeID())) {
-            System.err.println("Employee ID does not exist!");
             return;
         }
 
@@ -41,7 +40,6 @@ public class EmployeeService implements IEmployeeService {
         List<Employee> employees = ReadFileEmployee.readFile(FILE_EMPLOYEE);
 
         if (!checkID(employeeID)) {
-            System.err.println("Employee ID does not exist!");
             return;
         }
 
@@ -66,7 +64,6 @@ public class EmployeeService implements IEmployeeService {
         List<Employee> employees = ReadFileEmployee.readFile(FILE_EMPLOYEE);
 
         if (checkID(object.getEmployeeID())) {
-            System.err.println("Employee ID already exists!");
             return;
         }
 
