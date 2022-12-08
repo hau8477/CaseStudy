@@ -1,6 +1,5 @@
 package services.io_text_file.read_file;
 
-import models.facilitys.Facility;
 import models.facilitys.inheritance.Room;
 
 import java.io.*;
@@ -17,7 +16,7 @@ public class ReadFileRoom{
         while ((line = bufferedReader.readLine()) != null){
             String[] splitLine = line.split(",");
             Room room = new Room(splitLine);
-            map.put(room,Integer.parseInt(splitLine[7]));
+            map.put(room,Integer.parseInt(splitLine[splitLine.length-1]));
         }
 
         bufferedReader.close();

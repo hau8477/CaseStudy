@@ -1,6 +1,5 @@
 package services.io_text_file.read_file;
 
-import models.facilitys.Facility;
 import models.facilitys.inheritance.Villa;
 
 import java.io.*;
@@ -17,7 +16,7 @@ public class ReadFileVilla{
         while ((line = bufferedReader.readLine()) != null){
             String[] splitLine = line.split(",");
             Villa villa = new Villa(splitLine);
-            map.put(villa,Integer.parseInt(splitLine[9]));
+            map.put(villa,Integer.parseInt(splitLine[splitLine.length-1]));
         }
 
         bufferedReader.close();

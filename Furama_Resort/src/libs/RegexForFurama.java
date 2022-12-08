@@ -36,9 +36,7 @@ public class RegexForFurama {
         return Pattern.matches(NAME_SERVICE,string);
     }
 
-    public static boolean validateDoubleNumber(String string){
-        return Pattern.matches(DOUBLE_NUMBER,string);
-    }
+    public static boolean validateDoubleNumber(String string){ return Pattern.matches(DOUBLE_NUMBER,string); }
 
     public static boolean validatePositiveNumber(String string){
         return Pattern.matches(POSITIVE_NUMBER,string);
