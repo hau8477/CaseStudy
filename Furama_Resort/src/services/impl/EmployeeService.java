@@ -52,6 +52,9 @@ public class EmployeeService implements IEmployeeService {
                 break;
             }
         }
+        if (employeeDelete == null) {
+            return;
+        }
 
         employees.remove(employeeDelete);
         WriteFileEmployee.write(FILE_EMPLOYEE, employees);
