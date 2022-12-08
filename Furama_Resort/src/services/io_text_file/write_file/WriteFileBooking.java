@@ -1,4 +1,4 @@
-package services.io.text.file.write_file;
+package services.io_text_file.write_file;
 
 import models.booking.Booking;
 

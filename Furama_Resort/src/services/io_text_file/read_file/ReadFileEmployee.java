@@ -1,4 +1,4 @@
-package services.io.text.file.read_file;
+package services.io_text_file.read_file;
 
 import models.persons.inheritance.Employee;
 

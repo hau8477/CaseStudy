@@ -2,8 +2,8 @@ package services.impl;
 
 import models.persons.inheritance.Customer;
 import services.ICustomerService;
-import services.io.text.file.read_file.ReadFileCustomer;
-import services.io.text.file.write_file.WriteFileCustomer;
+import services.io_text_file.read_file.ReadFileCustomer;
+import services.io_text_file.write_file.WriteFileCustomer;
 
 import java.io.IOException;
 import java.util.List;
