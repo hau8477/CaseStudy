@@ -7,15 +7,15 @@ public class RegexForFurama {
 
     public static final String ID_SERVICE_ROOM = "^SV+RO-\\d{4}$";
 
-    public static final String NAME_SERVICE = "^[A-Z][a-z]+$";
+    public static final String NAME_SERVICE = "^[A-Z][a-z]+\\s*[A-z][a-z]*";
 
-    public static final String DOUBLE_NUMBER = "^([3-9]\\d|\\d{3,}).\\d{1,2}$";
+    public static final String DOUBLE_NUMBER = "^0*([3-9]\\d|\\d{3,}).\\d{1,2}$";
 
-    public static final String POSITIVE_NUMBER = "^([1-9]|[1-9]\\d+).\\d{1,2}$";
+    public static final String POSITIVE_NUMBER = "^0*([1-9]|[1-9]\\d+).\\d{1,2}$";
 
-    public static final String MAX_PEOPLE = "^[1-9]{1}|1\\d{1}$";
+    public static final String MAX_PEOPLE = "^0*[1-9]{1}|1\\d{1}$";
 
-    public static final String POSITIVE_INTEGER = "^[1-9]+$";
+    public static final String POSITIVE_INTEGER = "^0*[1-9]+$";
 
     public static final String DATE_OF_BIRTH = "^(?:(?:31(\\/|-|\\.)(?:0?[13578]|1[02]))\\1|(?:(?:29|30)(\\/|-|\\.)" +
             "(?:0?[13-9]|1[0-2])\\2))(?:(?:1[6-9]|[2-9]\\d)?\\d{2})$|^(?:29(\\/|-|\\.)0?2\\3(?:(?:(?:1[6-9]|[2-9]\\d)" +

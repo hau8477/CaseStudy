@@ -90,13 +90,15 @@ public abstract class Facility {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Facility facility = (Facility) o;
-        return Objects.equals(serviceID, facility.serviceID) && Objects.equals(nameService, facility.nameService) && Objects.equals(useArea, facility.useArea) && Objects.equals(rentCost, facility.rentCost) && Objects.equals(maxPerson, facility.maxPerson) && Objects.equals(rentalType, facility.rentalType);
+        return Objects.equals(nameService, facility.nameService);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(serviceID, nameService, useArea, rentCost, maxPerson, rentalType);
+        return Objects.hash(nameService);
     }
+
+
 
     @Override
     public String toString() {
