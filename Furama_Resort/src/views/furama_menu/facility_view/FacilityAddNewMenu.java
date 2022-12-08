@@ -79,7 +79,6 @@ public class FacilityAddNewMenu {
                     Facility villa = new Villa(serviceIDVilla, nameServiceVilla, useAreaVilla, rentCostVilla, maxPersonVilla,
                             rentalTypeVilla, roomStandard,
                             poolArea, floorNumbers);
-                    countOfUsesVilla++;
                     facilityController.addNewFacility(villa, countOfUsesVilla);
                     break;
                 case 2:
@@ -113,7 +112,6 @@ public class FacilityAddNewMenu {
 
                     Facility room = new Room(serviceIDRoom, nameServiceRoom, useAreaRoom, rentCostRoom, maxPersonRoom,
                             rentalTypeRoom, freeServiceIncludedRoom);
-                    countOfUsesRoom++;
                     facilityController.addNewFacility(room, countOfUsesRoom);
                     break;
                 case 3:
