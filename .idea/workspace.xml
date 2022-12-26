@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="984b608c-4e16-43fb-9cbd-41dd0ffdf7b4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/module2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final_exam/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final_exam/src/tesst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/final_exam/src/test" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/src/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/src/algorithm/MaxString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/src/ss19_string_and_regex/exercise/validate_phone_number/RegexException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/src/ttt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Furama_Resort/out/production/Furama_Resort/data/facility/villa.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Furama_Resort/out/production/Furama_Resort/data/facility/villa.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Furama_Resort/src/data/persons/employee.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Furama_Resort/src/data/persons/employee.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Furama_Resort/src/libs/RegexForFurama.java" beforeDir="false" afterPath="$PROJECT_DIR$/Furama_Resort/src/libs/RegexForFurama.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final_exam/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/final_exam/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final_exam/final_exam.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/C0922G1-NguyenNgocHau_module2" beforeDir="false" afterPath="$PROJECT_DIR$/java/C0922G1-NguyenNgocHau_module2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/C0922G1-NguyenNgocHau_module2/src/ss17_io_binary_file_serialazition/exercise/product_management/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/C0922G1-NguyenNgocHau_module2/src/ss17_io_binary_file_serialazition/exercise/product_management/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/C0922G1-NguyenNgocHau_module2/src/ss17_io_binary_file_serialazition/exercise/product_management/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/C0922G1-NguyenNgocHau_module2/src/ss17_io_binary_file_serialazition/exercise/product_management/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/out/production/java/demo_mvc/management_student/data/student.csv" beforeDir="false" afterPath="$PROJECT_DIR$/java/out/production/java/demo_mvc/management_student/data/student.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/out/production/java/ss19_string_and_regex/exercise/validate_name_class/NameClasses.class" beforeDir="false" afterPath="$PROJECT_DIR$/java/out/production/java/ss19_string_and_regex/exercise/validate_name_class/NameClasses.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/out/production/java/ss19_string_and_regex/exercise/validate_phone_number/PhoneNumberTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/java/out/production/java/ss19_string_and_regex/exercise/validate_phone_number/PhoneNumberTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/ss19_string_and_regex/exercise/validate_name_class/NameClasses.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/ss19_string_and_regex/exercise/validate_name_class/NameClasses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/ss19_string_and_regex/exercise/validate_phone_number/PhoneNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/ss19_string_and_regex/exercise/validate_phone_number/PhoneNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/ss19_string_and_regex/exercise/validate_phone_number/PhoneNumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/ss19_string_and_regex/exercise/validate_phone_number/PhoneNumberTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/java" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2J7GIofGEJmsEZKpdwyiOeMbVlQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/CodeGym/C0922G1/module2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;android.project.structure&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Application.ttt">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="module2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ttt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ttt" />
+      <module name="module2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ttt" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="984b608c-4e16-43fb-9cbd-41dd0ffdf7b4" name="Changes" comment="" />
+      <created>1671421630825</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1671421630825</updated>
+      <workItem from="1671421632289" duration="76000" />
+      <workItem from="1671421761950" duration="142000" />
+      <workItem from="1671421947272" duration="107000" />
+      <workItem from="1671422133092" duration="70000" />
+      <workItem from="1671422221953" duration="61000" />
+      <workItem from="1671422302118" duration="25000" />
+      <workItem from="1671422329975" duration="3000" />
+      <workItem from="1671422345504" duration="2000" />
+      <workItem from="1671422387045" duration="1415000" />
+      <workItem from="1671426490992" duration="640000" />
+      <workItem from="1671615055955" duration="5283000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/java/src/ss3_array_and_method_in_java/exercise/FindMaxElementIn2DArray.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

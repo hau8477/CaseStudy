@@ -3,9 +3,9 @@ package libs;
 import java.util.regex.Pattern;
 
 public class RegexForFurama {
-    public static final String ID_SERVICE_VILLA = "^SV+VL-\\d{4}$";
+    public static final String ID_SERVICE_VILLA = "^SVVL-\\d{4}$";
 
-    public static final String ID_SERVICE_ROOM = "^SV+RO-\\d{4}$";
+    public static final String ID_SERVICE_ROOM = "^SVRO-\\d{4}$";
 
     public static final String NAME_SERVICE = "^[A-Z][a-z]+\\s*[A-z][a-z]*";
 
