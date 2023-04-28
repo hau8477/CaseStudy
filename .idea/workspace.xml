@@ -5,28 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="984b608c-4e16-43fb-9cbd-41dd0ffdf7b4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/module2.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/final_exam/src/Main.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/final_exam/src/tesst.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/final_exam/src/test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/src/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/src/algorithm/MaxString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/src/ss19_string_and_regex/exercise/validate_phone_number/RegexException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/src/ttt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Furama_Resort/out/production/Furama_Resort/data/facility/villa.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Furama_Resort/out/production/Furama_Resort/data/facility/villa.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Furama_Resort/src/data/persons/employee.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Furama_Resort/src/data/persons/employee.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Furama_Resort/src/libs/RegexForFurama.java" beforeDir="false" afterPath="$PROJECT_DIR$/Furama_Resort/src/libs/RegexForFurama.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/src/algorithm/Tesst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final_exam/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/final_exam/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final_exam/final_exam.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/C0922G1-NguyenNgocHau_module2" beforeDir="false" afterPath="$PROJECT_DIR$/java/C0922G1-NguyenNgocHau_module2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/C0922G1-NguyenNgocHau_module2/src/ss17_io_binary_file_serialazition/exercise/product_management/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/C0922G1-NguyenNgocHau_module2/src/ss17_io_binary_file_serialazition/exercise/product_management/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/C0922G1-NguyenNgocHau_module2/src/ss17_io_binary_file_serialazition/exercise/product_management/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/C0922G1-NguyenNgocHau_module2/src/ss17_io_binary_file_serialazition/exercise/product_management/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/out/production/java/demo_mvc/management_student/data/student.csv" beforeDir="false" afterPath="$PROJECT_DIR$/java/out/production/java/demo_mvc/management_student/data/student.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/out/production/java/ss19_string_and_regex/exercise/validate_name_class/NameClasses.class" beforeDir="false" afterPath="$PROJECT_DIR$/java/out/production/java/ss19_string_and_regex/exercise/validate_name_class/NameClasses.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/out/production/java/ss19_string_and_regex/exercise/validate_phone_number/PhoneNumberTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/java/out/production/java/ss19_string_and_regex/exercise/validate_phone_number/PhoneNumberTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java" beforeDir="false" afterPath="$PROJECT_DIR$/java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/ss19_string_and_regex/exercise/validate_name_class/NameClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/ss19_string_and_regex/exercise/validate_name_class/NameClassTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java/src/ss19_string_and_regex/exercise/validate_name_class/NameClasses.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/ss19_string_and_regex/exercise/validate_name_class/NameClasses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/ss19_string_and_regex/exercise/validate_phone_number/PhoneNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/ss19_string_and_regex/exercise/validate_phone_number/PhoneNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/ss19_string_and_regex/exercise/validate_phone_number/PhoneNumberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/ss19_string_and_regex/exercise/validate_phone_number/PhoneNumberTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,22 +41,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/CodeGym/C0922G1/module2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;android.project.structure&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/CodeGym/C0922G1/module2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "android.project.structure"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.ttt">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -109,6 +98,8 @@
       <workItem from="1671422387045" duration="1415000" />
       <workItem from="1671426490992" duration="640000" />
       <workItem from="1671615055955" duration="5283000" />
+      <workItem from="1672028598291" duration="674000" />
+      <workItem from="1676381690396" duration="146000" />
     </task>
     <servers />
   </component>
